@@ -5,7 +5,7 @@
     "Jade Melbourne",
     "Nyadiew Puoch"
   ],
-  "updatedAt": "2026-11-11T02:43:08.054191+00:00",
+  "updatedAt": "2026-11-11T07:32:29.625861+00:00",
   "games": [
     {
       "id": "401918311",
@@ -4329,11 +4329,8 @@
     }
   ],
   "upcoming": [],
-  "warnings": [
-    "summary 401856947: HTTP Error 404: Not Found",
-    "summary 401856954: HTTP Error 404: Not Found"
-  ],
+  "warnings": [],
   "successful": true,
-  "backfill": true,
+  "backfill": false,
   "note": "WNBA future player fixtures require roster verification; no guesses are made."
 }
