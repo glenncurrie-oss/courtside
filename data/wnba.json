@@ -5,7 +5,7 @@
     "Jade Melbourne",
     "Nyadiew Puoch"
   ],
-  "updatedAt": "2026-11-11T02:14:30.328123+00:00",
+  "updatedAt": "2026-11-11T02:36:02.677913+00:00",
   "games": [
     {
       "id": "401918311",
@@ -33,7 +33,9 @@
         "DREB": "2",
         "PF": "1",
         "+/-": "-11"
-      }
+      },
+      "headshot": "https://a.espncdn.com/i/headshots/wnba/players/full/5208983.png",
+      "athleteId": "5208983"
     },
     {
       "id": "401918310",
@@ -61,7 +63,9 @@
         "DREB": "1",
         "PF": "0",
         "+/-": "+2"
-      }
+      },
+      "headshot": "https://a.espncdn.com/i/headshots/wnba/players/full/5208983.png",
+      "athleteId": "5208983"
     },
     {
       "id": "401918309",
@@ -89,7 +93,9 @@
         "DREB": "3",
         "PF": "3",
         "+/-": "-2"
-      }
+      },
+      "headshot": "https://a.espncdn.com/i/headshots/wnba/players/full/5208983.png",
+      "athleteId": "5208983"
     },
     {
       "id": "401918308",
@@ -117,7 +123,9 @@
         "DREB": "2",
         "PF": "5",
         "+/-": "-7"
-      }
+      },
+      "headshot": "https://a.espncdn.com/i/headshots/wnba/players/full/5208983.png",
+      "athleteId": "5208983"
     },
     {
       "id": "401918307",
@@ -145,11 +153,14 @@
         "DREB": "5",
         "PF": "2",
         "+/-": "+21"
-      }
+      },
+      "headshot": "https://a.espncdn.com/i/headshots/wnba/players/full/5208983.png",
+      "athleteId": "5208983"
     }
   ],
   "upcoming": [],
   "warnings": [],
   "successful": true,
+  "backfill": false,
   "note": "WNBA future player fixtures require roster verification; no guesses are made."
 }
