@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '17 */6 * * *'
   workflow_dispatch:
+    inputs:
+      wnba_backfill:
+        description: "Backfill WNBA season (May through today; slower)"
+        type: boolean
+        default: false
 permissions:
   contents: write
 jobs:
@@ -20,6 +25,8 @@ jobs:
       - name: Fetch WNBA data
         id: wnba
         continue-on-error: true
+        env:
+          COURTSIDE_WNBA_BACKFILL: ${{ inputs.wnba_backfill && '1' || '0' }}
         run: python scripts/update_wnba.py
       - name: Commit successful data updates
         run: |
