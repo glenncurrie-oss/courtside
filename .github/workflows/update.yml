@@ -1,4 +1,4 @@
-name: Update Courtside NBA data
+name: Update Courtside basketball data
 on:
   schedule:
     - cron: '17 */6 * * *'
@@ -13,14 +13,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Fetch NBA scores and game logs
+      - name: Fetch NBA data
+        id: nba
+        continue-on-error: true
         run: python scripts/update_nba.py
-      - name: Commit refreshed data
+      - name: Fetch WNBA data
+        id: wnba
+        continue-on-error: true
+        run: python scripts/update_wnba.py
+      - name: Commit successful data updates
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/nba.json
+          git add data/nba.json data/wnba.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Update NBA data'
+            git commit -m 'Update Courtside basketball data'
             git push
           fi
+      - name: Report collector failures
+        if: steps.nba.outcome == 'failure' || steps.wnba.outcome == 'failure'
+        run: |
+          echo 'One or more collectors failed; any successful results were retained.'
+          exit 1
