@@ -1,7 +1,7 @@
 """Incrementally collect verified WNBA box scores for followed players.
 Unofficial ESPN endpoint; availability and reuse permissions are not guaranteed.
 """
-import datetime as dt, json, time, urllib.request
+import datetime as dt, json, time, urllib.request, os
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data'/'wnba.json'
@@ -20,8 +20,15 @@ def main():
     errors=[];success=0
     today=dt.datetime.now(dt.timezone.utc).date()
     # WNBA is seasonal. Keep accumulated history between runs and across seasons.
-    for offset in range(-21,22):
-        day=today+dt.timedelta(days=offset)
+    # Full season once on demand; subsequent scheduled runs stay lightweight.
+    # Set COURTSIDE_WNBA_BACKFILL=1 in workflow dispatch to force a rescan.
+    backfill=os.getenv('COURTSIDE_WNBA_BACKFILL')=='1'
+    start=dt.date(today.year, 5, 1) if backfill else today-dt.timedelta(days=21)
+    end=today+dt.timedelta(days=21)
+    days=(end-start).days+1
+    print('WNBA date range:',start,end,'days:',days)
+    for offset in range(days):
+        day=start+dt.timedelta(days=offset)
         try:
             data=get('/scoreboard?dates='+day.strftime('%Y%m%d')+'&limit=100');success+=1
             for event in data.get('events',[]):
@@ -56,7 +63,9 @@ def main():
                                     'teamScore':ours.get('score') if ours else None,
                                     'opponentScore':other.get('score') if other else None,
                                     'home':ours.get('homeAway')=='home' if ours else None,
-                                    'status':'post','stats':stats}
+                                    'status':'post','stats':stats,
+                                     'headshot':(row.get('athlete',{}).get('headshot') or {}).get('href'),
+                                     'athleteId':str(row.get('athlete',{}).get('id') or '')}
                     time.sleep(.1)
                 except Exception as e:errors.append('summary '+eid+': '+str(e)[:90])
             time.sleep(.1)
@@ -65,7 +74,7 @@ def main():
             'updatedAt':dt.datetime.now(dt.timezone.utc).isoformat() if success else old.get('updatedAt'),
             'games':sorted(games.values(),key=lambda g:g.get('date') or '',reverse=True),
             'upcoming':list(upcoming.values()),'warnings':errors[:10],
-            'successful':success>0,'note':'WNBA future player fixtures require roster verification; no guesses are made.'}
+            'successful':success>0,'backfill':backfill,'note':'WNBA future player fixtures require roster verification; no guesses are made.'}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
     print('WNBA scoreboards:',success,'matched game logs:',len(games),'errors:',len(errors))

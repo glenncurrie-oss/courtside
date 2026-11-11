@@ -39,7 +39,7 @@ def main():
                       'teamScore':ours.get('score') if state=='post' else None,'opponentScore':other.get('score') if state=='post' else None}
                 if state=='pre': fixtures[item['id']]=item
                 elif state=='post':
-                    if item['id'] in logs and logs[item['id']].get('stats'):
+                    if item['id'] in logs and logs[item['id']].get('stats') and logs[item['id']].get('headshot'):
                         continue
                     try:
                         summary=fetch('/summary?event='+item['id'])
@@ -53,6 +53,8 @@ def main():
                                     if who.casefold()!=NAME.casefold(): continue
                                     vals=athlete.get('stats',[])
                                     stats=dict(zip(labels,vals)) if vals else None
+                                    item['headshot']=(athlete.get('athlete',{}).get('headshot') or {}).get('href')
+                                    item['athleteId']=str(athlete.get('athlete',{}).get('id') or '')
                         item['stats']=stats
                     except Exception as exc: errors.append('boxscore '+item['id']+': '+str(exc)[:100]);item['stats']=None
                     logs[item['id']]=item
