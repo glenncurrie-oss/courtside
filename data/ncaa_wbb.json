@@ -1,6 +1,6 @@
 {
   "source": "ESPN NCAA endpoints (unofficial)",
-  "updatedAt": "2026-11-11T06:40:07.773340+00:00",
+  "updatedAt": "2026-11-12T00:28:16.040595+00:00",
   "players": [
     "Monique Bobongie",
     "Dallas Loughridge"
@@ -123,8 +123,181 @@
       "headshot": null
     }
   ],
-  "upcoming": [],
-  "warnings": [],
+  "upcoming": [
+    {
+      "id": "401919324",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-11-13T00:00Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Columbia Lions",
+      "home": false,
+      "status": "pre"
+    },
+    {
+      "id": "401913858",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-11-15T19:00Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Harvard Crimson",
+      "home": false,
+      "status": "pre"
+    },
+    {
+      "id": "401927069",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-11-17T01:00Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Central Michigan Chippewas",
+      "home": false,
+      "status": "pre"
+    },
+    {
+      "id": "401916196",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-11-19T00:00Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Niagara Purple Eagles",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401919438",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-11-19T23:30Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Sacred Heart Pioneers",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401916024",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-11-23T17:00Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Alcorn State Lady Braves",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401913729",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-11-23T21:00Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Miami Hurricanes",
+      "home": false,
+      "status": "pre"
+    },
+    {
+      "id": "401927070",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-11-25T18:30Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Toledo Rockets",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401927077",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-11-29T19:00Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Eastern Michigan Eagles",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401927071",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-12-01T00:00Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Southern Indiana Screaming Eagles",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401927078",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-12-03T23:30Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Maine Black Bears",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401927072",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-12-05T07:00Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Oklahoma Sooners",
+      "home": false,
+      "status": "pre"
+    },
+    {
+      "id": "401921853",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-12-06T21:00Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Penn State Lady Lions",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401927073",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-12-08T00:00Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Kent State Golden Flashes",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401927079",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-12-09T23:30Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Milwaukee Panthers",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401921855",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-12-12T00:00Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Maryland Terrapins",
+      "home": false,
+      "status": "pre"
+    },
+    {
+      "id": "401913052",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-12-13T19:00Z",
+      "team": "Michigan State Spartans",
+      "opponent": "DePaul Blue Demons",
+      "home": true,
+      "status": "pre"
+    }
+  ],
+  "warnings": [
+    "summary 401931546: IncompleteRead(428094 bytes read)"
+  ],
   "successful": true,
-  "backfill": false
+  "backfill": true
 }

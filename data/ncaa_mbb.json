@@ -1,12 +1,10 @@
 {
   "source": "ESPN NCAA endpoints (unofficial)",
-  "updatedAt": "2026-11-11T06:38:17.669720+00:00",
-  "players": [
-    "Dallas Loughridge"
-  ],
+  "updatedAt": "2026-11-12T00:25:22.035785+00:00",
+  "players": [],
   "games": [],
   "upcoming": [],
   "warnings": [],
   "successful": true,
-  "backfill": false
+  "backfill": true
 }
