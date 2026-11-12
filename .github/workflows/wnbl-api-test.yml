@@ -1,0 +1,22 @@
+name: Courtside WNBL direct API test
+on:
+  workflow_dispatch:
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test official WNBL match JSON
+        run: python scripts/probe_wnbl_api.py
+      - name: Upload diagnostic even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wnbl-api-diagnostic
+          path: wnbl-api-diagnostic.json
+          if-no-files-found: warn
