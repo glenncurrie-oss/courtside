@@ -1,0 +1,604 @@
+{
+  "market": "AU",
+  "league": "NBA",
+  "updatedAt": "2026-11-12T05:10:40Z",
+  "verified": [],
+  "candidates": [
+    {
+      "espnEventId": "401909976",
+      "date": "2026-11-13T00:00Z",
+      "homeTeam": "Philadelphia 76ers",
+      "awayTeam": "Toronto Raptors",
+      "usBroadcastHints": [],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909977",
+      "date": "2026-11-13T00:00Z",
+      "homeTeam": "Washington Wizards",
+      "awayTeam": "Detroit Pistons",
+      "usBroadcastHints": [
+        "MNMT"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909978",
+      "date": "2026-11-13T01:00Z",
+      "homeTeam": "Minnesota Timberwolves",
+      "awayTeam": "Dallas Mavericks",
+      "usBroadcastHints": [
+        "KFAA-TV",
+        "MavsTV",
+        "NBA TV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909979",
+      "date": "2026-11-13T02:00Z",
+      "homeTeam": "Phoenix Suns",
+      "awayTeam": "Charlotte Hornets",
+      "usBroadcastHints": [
+        "Arizona's Family 3TV",
+        "Suns Live"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909296",
+      "date": "2026-11-14T00:00Z",
+      "homeTeam": "Indiana Pacers",
+      "awayTeam": "New York Knicks",
+      "usBroadcastHints": [
+        "Prime Video"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909297",
+      "date": "2026-11-14T00:00Z",
+      "homeTeam": "Orlando Magic",
+      "awayTeam": "Milwaukee Bucks",
+      "usBroadcastHints": [
+        "Bucks App",
+        "MyMi"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909298",
+      "date": "2026-11-14T01:00Z",
+      "homeTeam": "Miami Heat",
+      "awayTeam": "Cleveland Cavaliers",
+      "usBroadcastHints": [
+        "DAZN CLE"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909299",
+      "date": "2026-11-14T01:00Z",
+      "homeTeam": "Chicago Bulls",
+      "awayTeam": "Atlanta Hawks",
+      "usBroadcastHints": [],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909300",
+      "date": "2026-11-14T01:00Z",
+      "homeTeam": "New Orleans Pelicans",
+      "awayTeam": "Memphis Grizzlies",
+      "usBroadcastHints": [
+        "DAZN MEM",
+        "GCSEN",
+        "Pelicans.com"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909301",
+      "date": "2026-11-14T01:30Z",
+      "homeTeam": "Houston Rockets",
+      "awayTeam": "Utah Jazz",
+      "usBroadcastHints": [
+        "Jazz+",
+        "KJZZ-TV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909302",
+      "date": "2026-11-14T02:30Z",
+      "homeTeam": "San Antonio Spurs",
+      "awayTeam": "Golden State Warriors",
+      "usBroadcastHints": [
+        "Prime Video"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909303",
+      "date": "2026-11-14T03:00Z",
+      "homeTeam": "Sacramento Kings",
+      "awayTeam": "Portland Trail Blazers",
+      "usBroadcastHints": [
+        "BlazerVision",
+        "KUNP 16"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909304",
+      "date": "2026-11-14T03:30Z",
+      "homeTeam": "LA Clippers",
+      "awayTeam": "Oklahoma City Thunder",
+      "usBroadcastHints": [
+        "ClipperVision",
+        "KSBI",
+        "KTLA",
+        "Thunder App"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909980",
+      "date": "2026-11-15T00:00Z",
+      "homeTeam": "New Orleans Pelicans",
+      "awayTeam": "Denver Nuggets",
+      "usBroadcastHints": [
+        "GCSEN",
+        "Pelicans.com"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909981",
+      "date": "2026-11-15T00:30Z",
+      "homeTeam": "Cleveland Cavaliers",
+      "awayTeam": "Dallas Mavericks",
+      "usBroadcastHints": [
+        "KFAA-TV",
+        "MavsTV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909982",
+      "date": "2026-11-15T01:00Z",
+      "homeTeam": "Miami Heat",
+      "awayTeam": "Detroit Pistons",
+      "usBroadcastHints": [
+        "NBA TV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909983",
+      "date": "2026-11-15T01:00Z",
+      "homeTeam": "Memphis Grizzlies",
+      "awayTeam": "Brooklyn Nets",
+      "usBroadcastHints": [
+        "DAZN (YES)",
+        "DAZN MEM"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909984",
+      "date": "2026-11-15T01:00Z",
+      "homeTeam": "Minnesota Timberwolves",
+      "awayTeam": "Chicago Bulls",
+      "usBroadcastHints": [
+        "DAZN MIN"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909985",
+      "date": "2026-11-15T18:00Z",
+      "homeTeam": "Philadelphia 76ers",
+      "awayTeam": "Indiana Pacers",
+      "usBroadcastHints": [
+        "DAZN IND"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909986",
+      "date": "2026-11-15T21:00Z",
+      "homeTeam": "Phoenix Suns",
+      "awayTeam": "Los Angeles Lakers",
+      "usBroadcastHints": [
+        "Arizona's Family 3TV",
+        "Spectrum Sports Net",
+        "Spectrum Sports Net +",
+        "Suns Live"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909987",
+      "date": "2026-11-15T21:30Z",
+      "homeTeam": "LA Clippers",
+      "awayTeam": "Charlotte Hornets",
+      "usBroadcastHints": [
+        "ClipperVision"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909988",
+      "date": "2026-11-15T22:00Z",
+      "homeTeam": "Utah Jazz",
+      "awayTeam": "San Antonio Spurs",
+      "usBroadcastHints": [
+        "DAZN SAS",
+        "Jazz+",
+        "KJZZ-TV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909989",
+      "date": "2026-11-15T23:00Z",
+      "homeTeam": "Boston Celtics",
+      "awayTeam": "Dallas Mavericks",
+      "usBroadcastHints": [
+        "KFAA-TV",
+        "MavsTV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909990",
+      "date": "2026-11-15T23:00Z",
+      "homeTeam": "Toronto Raptors",
+      "awayTeam": "New York Knicks",
+      "usBroadcastHints": [],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909991",
+      "date": "2026-11-16T00:00Z",
+      "homeTeam": "Washington Wizards",
+      "awayTeam": "Houston Rockets",
+      "usBroadcastHints": [
+        "MNMT"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909992",
+      "date": "2026-11-16T01:00Z",
+      "homeTeam": "Milwaukee Bucks",
+      "awayTeam": "Atlanta Hawks",
+      "usBroadcastHints": [
+        "Bucks App",
+        "MyMi"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909993",
+      "date": "2026-11-16T02:00Z",
+      "homeTeam": "Sacramento Kings",
+      "awayTeam": "Oklahoma City Thunder",
+      "usBroadcastHints": [
+        "KSBI",
+        "Thunder App"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909994",
+      "date": "2026-11-17T00:00Z",
+      "homeTeam": "Boston Celtics",
+      "awayTeam": "Orlando Magic",
+      "usBroadcastHints": [
+        "NBCSN"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909995",
+      "date": "2026-11-17T00:00Z",
+      "homeTeam": "Cleveland Cavaliers",
+      "awayTeam": "Chicago Bulls",
+      "usBroadcastHints": [
+        "DAZN CLE"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909996",
+      "date": "2026-11-17T00:00Z",
+      "homeTeam": "Washington Wizards",
+      "awayTeam": "Memphis Grizzlies",
+      "usBroadcastHints": [
+        "MNMT"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909997",
+      "date": "2026-11-17T00:30Z",
+      "homeTeam": "Brooklyn Nets",
+      "awayTeam": "Philadelphia 76ers",
+      "usBroadcastHints": [
+        "DAZN (YES)"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909998",
+      "date": "2026-11-17T00:30Z",
+      "homeTeam": "Miami Heat",
+      "awayTeam": "Houston Rockets",
+      "usBroadcastHints": [],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401909999",
+      "date": "2026-11-17T01:00Z",
+      "homeTeam": "Minnesota Timberwolves",
+      "awayTeam": "Portland Trail Blazers",
+      "usBroadcastHints": [
+        "BlazerVision",
+        "DAZN MIN",
+        "KUNP 16"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910000",
+      "date": "2026-11-17T01:00Z",
+      "homeTeam": "New Orleans Pelicans",
+      "awayTeam": "Golden State Warriors",
+      "usBroadcastHints": [
+        "GCSEN",
+        "Pelicans.com"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910001",
+      "date": "2026-11-17T02:00Z",
+      "homeTeam": "Denver Nuggets",
+      "awayTeam": "Phoenix Suns",
+      "usBroadcastHints": [
+        "Arizona's Family 3TV",
+        "Suns Live"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910002",
+      "date": "2026-11-18T00:30Z",
+      "homeTeam": "Toronto Raptors",
+      "awayTeam": "New York Knicks",
+      "usBroadcastHints": [],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910003",
+      "date": "2026-11-18T01:00Z",
+      "homeTeam": "Minnesota Timberwolves",
+      "awayTeam": "Portland Trail Blazers",
+      "usBroadcastHints": [
+        "BlazerVision",
+        "DAZN MIN"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910004",
+      "date": "2026-11-18T01:00Z",
+      "homeTeam": "San Antonio Spurs",
+      "awayTeam": "Detroit Pistons",
+      "usBroadcastHints": [
+        "NBC"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910006",
+      "date": "2026-11-18T03:30Z",
+      "homeTeam": "LA Clippers",
+      "awayTeam": "Utah Jazz",
+      "usBroadcastHints": [
+        "ClipperVision",
+        "Jazz+",
+        "KJZZ-TV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910005",
+      "date": "2026-11-18T04:00Z",
+      "homeTeam": "Los Angeles Lakers",
+      "awayTeam": "Charlotte Hornets",
+      "usBroadcastHints": [
+        "NBC",
+        "Spectrum Sports Net",
+        "Spectrum Sports Net +"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910007",
+      "date": "2026-11-19T00:00Z",
+      "homeTeam": "Cleveland Cavaliers",
+      "awayTeam": "Memphis Grizzlies",
+      "usBroadcastHints": [
+        "DAZN CLE",
+        "DAZN MEM"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910008",
+      "date": "2026-11-19T00:00Z",
+      "homeTeam": "Indiana Pacers",
+      "awayTeam": "Houston Rockets",
+      "usBroadcastHints": [
+        "DAZN IND"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910009",
+      "date": "2026-11-19T00:00Z",
+      "homeTeam": "Miami Heat",
+      "awayTeam": "Milwaukee Bucks",
+      "usBroadcastHints": [
+        "Bucks App",
+        "ESPN",
+        "MyMi"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910010",
+      "date": "2026-11-19T00:00Z",
+      "homeTeam": "Orlando Magic",
+      "awayTeam": "Philadelphia 76ers",
+      "usBroadcastHints": [],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910011",
+      "date": "2026-11-19T00:30Z",
+      "homeTeam": "Brooklyn Nets",
+      "awayTeam": "Chicago Bulls",
+      "usBroadcastHints": [
+        "DAZN (YES)"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910012",
+      "date": "2026-11-19T00:30Z",
+      "homeTeam": "Toronto Raptors",
+      "awayTeam": "Washington Wizards",
+      "usBroadcastHints": [
+        "MNMT"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910013",
+      "date": "2026-11-19T01:00Z",
+      "homeTeam": "New Orleans Pelicans",
+      "awayTeam": "Detroit Pistons",
+      "usBroadcastHints": [
+        "GCSEN",
+        "Pelicans.com"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910014",
+      "date": "2026-11-19T01:00Z",
+      "homeTeam": "Oklahoma City Thunder",
+      "awayTeam": "Atlanta Hawks",
+      "usBroadcastHints": [
+        "KSBI",
+        "Thunder App"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910015",
+      "date": "2026-11-19T02:00Z",
+      "homeTeam": "Denver Nuggets",
+      "awayTeam": "Boston Celtics",
+      "usBroadcastHints": [],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910016",
+      "date": "2026-11-19T02:30Z",
+      "homeTeam": "Dallas Mavericks",
+      "awayTeam": "Golden State Warriors",
+      "usBroadcastHints": [
+        "ESPN",
+        "KFAA-TV",
+        "MavsTV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910017",
+      "date": "2026-11-19T03:00Z",
+      "homeTeam": "Los Angeles Lakers",
+      "awayTeam": "Utah Jazz",
+      "usBroadcastHints": [
+        "Jazz+",
+        "KJZZ-TV",
+        "Spectrum Sports Net",
+        "Spectrum Sports Net +"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910018",
+      "date": "2026-11-19T03:00Z",
+      "homeTeam": "Sacramento Kings",
+      "awayTeam": "Phoenix Suns",
+      "usBroadcastHints": [
+        "Arizona's Family 3TV",
+        "Suns Live"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910019",
+      "date": "2026-11-20T01:00Z",
+      "homeTeam": "Memphis Grizzlies",
+      "awayTeam": "Golden State Warriors",
+      "usBroadcastHints": [
+        "DAZN MEM"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910020",
+      "date": "2026-11-20T01:00Z",
+      "homeTeam": "Milwaukee Bucks",
+      "awayTeam": "Portland Trail Blazers",
+      "usBroadcastHints": [
+        "BlazerVision",
+        "Bucks App",
+        "KUNP 16",
+        "MyMi"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910021",
+      "date": "2026-11-20T01:00Z",
+      "homeTeam": "Minnesota Timberwolves",
+      "awayTeam": "New York Knicks",
+      "usBroadcastHints": [
+        "DAZN MIN",
+        "NBA TV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910022",
+      "date": "2026-11-20T01:00Z",
+      "homeTeam": "San Antonio Spurs",
+      "awayTeam": "LA Clippers",
+      "usBroadcastHints": [
+        "ClipperVision",
+        "DAZN SAS",
+        "KTLA"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    }
+  ],
+  "errors": [],
+  "notes": "Only verified entries have Australian broadcast providers. ESPN broadcast hints are US-oriented and are never treated as AU confirmations."
+}
