@@ -1,0 +1,998 @@
+{
+  "league": "WNBL",
+  "season": "2026-27",
+  "updatedAt": "2026-11-12T01:17:58Z",
+  "source": "https://fixturedownload.azurewebsites.net/feed/json/wnbl-2026",
+  "games": [],
+  "upcoming": [
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Sydney Flames",
+      "home": true,
+      "date": "2026-11-14T04:00:00Z",
+      "status": "Scheduled",
+      "venue": "Red Energy Arena",
+      "round": 5,
+      "matchNumber": 74,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Sydney Flames",
+      "home": true,
+      "date": "2026-11-14T04:00:00Z",
+      "status": "Scheduled",
+      "venue": "Red Energy Arena",
+      "round": 5,
+      "matchNumber": 74,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Townsville Fire",
+      "home": true,
+      "date": "2026-11-15T04:00:00Z",
+      "status": "Scheduled",
+      "venue": "AIS Arena",
+      "round": 5,
+      "matchNumber": 76,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Tasmania Jewels",
+      "home": true,
+      "date": "2026-11-22T02:00:00Z",
+      "status": "Scheduled",
+      "venue": "AIS Arena",
+      "round": 6,
+      "matchNumber": 80,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Townsville Fire",
+      "home": false,
+      "date": "2026-11-22T04:00:00Z",
+      "status": "Scheduled",
+      "venue": "Townsville Entertainment & Convention Centre",
+      "round": 6,
+      "matchNumber": 81,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Townsville Fire",
+      "home": false,
+      "date": "2026-11-22T04:00:00Z",
+      "status": "Scheduled",
+      "venue": "Townsville Entertainment & Convention Centre",
+      "round": 6,
+      "matchNumber": 81,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Perth Lynx",
+      "home": false,
+      "date": "2026-11-24T10:00:00Z",
+      "status": "Scheduled",
+      "venue": "Perth High Performance Centre",
+      "round": 6,
+      "matchNumber": 82,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Tasmania Jewels",
+      "home": true,
+      "date": "2026-11-26T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "Red Energy Arena",
+      "round": 7,
+      "matchNumber": 83,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Tasmania Jewels",
+      "home": true,
+      "date": "2026-11-26T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "Red Energy Arena",
+      "round": 7,
+      "matchNumber": 83,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Geelong Venom",
+      "home": true,
+      "date": "2026-11-27T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "AIS Arena",
+      "round": 7,
+      "matchNumber": 84,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Southside Melbourne Flyers",
+      "home": false,
+      "date": "2026-11-29T02:00:00Z",
+      "status": "Scheduled",
+      "venue": "State Sport Centres, Parkville",
+      "round": 7,
+      "matchNumber": 87,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Southside Melbourne Flyers",
+      "home": false,
+      "date": "2026-11-29T02:00:00Z",
+      "status": "Scheduled",
+      "venue": "State Sport Centres, Parkville",
+      "round": 7,
+      "matchNumber": 87,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Tasmania Jewels",
+      "home": false,
+      "date": "2026-11-29T04:00:00Z",
+      "status": "Scheduled",
+      "venue": "MyState Bank Arena",
+      "round": 7,
+      "matchNumber": 88,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "UC Capitals",
+      "home": false,
+      "date": "2026-12-04T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "AIS Arena",
+      "round": 8,
+      "matchNumber": 91,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "UC Capitals",
+      "home": false,
+      "date": "2026-12-04T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "AIS Arena",
+      "round": 8,
+      "matchNumber": 91,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Bendigo Spirit",
+      "home": true,
+      "date": "2026-12-04T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "AIS Arena",
+      "round": 8,
+      "matchNumber": 91,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Southside Melbourne Flyers",
+      "home": false,
+      "date": "2026-12-06T02:00:00Z",
+      "status": "Scheduled",
+      "venue": "VIC State Basketball Centre",
+      "round": 8,
+      "matchNumber": 94,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Perth Lynx",
+      "home": true,
+      "date": "2026-12-08T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "Red Energy Arena",
+      "round": 8,
+      "matchNumber": 96,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Perth Lynx",
+      "home": true,
+      "date": "2026-12-08T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "Red Energy Arena",
+      "round": 8,
+      "matchNumber": 96,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Adelaide Lightning",
+      "home": true,
+      "date": "2026-12-11T06:00:00Z",
+      "status": "Scheduled",
+      "venue": "AIS Arena",
+      "round": 9,
+      "matchNumber": 97,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Geelong Venom",
+      "home": true,
+      "date": "2026-12-12T04:00:00Z",
+      "status": "Scheduled",
+      "venue": "Red Energy Arena",
+      "round": 9,
+      "matchNumber": 99,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Geelong Venom",
+      "home": true,
+      "date": "2026-12-12T04:00:00Z",
+      "status": "Scheduled",
+      "venue": "Red Energy Arena",
+      "round": 9,
+      "matchNumber": 99,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Sydney Flames",
+      "home": true,
+      "date": "2026-12-15T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "AIS Arena",
+      "round": 9,
+      "matchNumber": 3,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Sydney Flames",
+      "home": true,
+      "date": "2026-12-18T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "Gippsland Regional Indoor Sports Stadium",
+      "round": 10,
+      "matchNumber": 5,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Sydney Flames",
+      "home": true,
+      "date": "2026-12-18T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "Gippsland Regional Indoor Sports Stadium",
+      "round": 10,
+      "matchNumber": 5,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Tasmania Jewels",
+      "home": false,
+      "date": "2026-12-19T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "Silverdome",
+      "round": 10,
+      "matchNumber": 7,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Adelaide Lightning",
+      "home": false,
+      "date": "2026-12-22T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "SA State Basketball Centre",
+      "round": 10,
+      "matchNumber": 10,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Adelaide Lightning",
+      "home": false,
+      "date": "2026-12-22T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "SA State Basketball Centre",
+      "round": 10,
+      "matchNumber": 10,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Tasmania Jewels",
+      "home": false,
+      "date": "2026-12-27T02:00:00Z",
+      "status": "Scheduled",
+      "venue": "MyState Bank Arena",
+      "round": 11,
+      "matchNumber": 12,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Tasmania Jewels",
+      "home": false,
+      "date": "2026-12-27T02:00:00Z",
+      "status": "Scheduled",
+      "venue": "MyState Bank Arena",
+      "round": 11,
+      "matchNumber": 12,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Adelaide Lightning",
+      "home": false,
+      "date": "2026-12-27T04:00:00Z",
+      "status": "Scheduled",
+      "venue": "SA State Basketball Centre",
+      "round": 11,
+      "matchNumber": 13,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Townsville Fire",
+      "home": false,
+      "date": "2026-12-31T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "Townsville Entertainment & Convention Centre",
+      "round": 12,
+      "matchNumber": 17,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Townsville Fire",
+      "home": false,
+      "date": "2026-12-31T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "Townsville Entertainment & Convention Centre",
+      "round": 12,
+      "matchNumber": 17,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Geelong Venom",
+      "home": false,
+      "date": "2027-01-02T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "Microkeeper Arena",
+      "round": 12,
+      "matchNumber": 19,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Geelong Venom",
+      "home": false,
+      "date": "2027-01-02T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "Microkeeper Arena",
+      "round": 12,
+      "matchNumber": 19,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Southside Melbourne Flyers",
+      "home": true,
+      "date": "2027-01-03T02:00:00Z",
+      "status": "Scheduled",
+      "venue": "AIS Arena",
+      "round": 12,
+      "matchNumber": 20,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Perth Lynx",
+      "home": false,
+      "date": "2027-01-08T10:00:00Z",
+      "status": "Scheduled",
+      "venue": "Perth High Performance Centre",
+      "round": 13,
+      "matchNumber": 25,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Sydney Flames",
+      "home": false,
+      "date": "2027-01-10T03:30:00Z",
+      "status": "Scheduled",
+      "venue": "Afterpay Arena",
+      "round": 13,
+      "matchNumber": 27,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Sydney Flames",
+      "home": false,
+      "date": "2027-01-10T03:30:00Z",
+      "status": "Scheduled",
+      "venue": "Afterpay Arena",
+      "round": 13,
+      "matchNumber": 27,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Geelong Venom",
+      "home": true,
+      "date": "2027-01-12T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "AIS Arena",
+      "round": 13,
+      "matchNumber": 30,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Adelaide Lightning",
+      "home": true,
+      "date": "2027-01-15T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "RAC Arena",
+      "round": 14,
+      "matchNumber": 33,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Perth Lynx",
+      "home": false,
+      "date": "2027-01-17T03:30:00Z",
+      "status": "Scheduled",
+      "venue": "RAC Arena",
+      "round": 14,
+      "matchNumber": 35,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Perth Lynx",
+      "home": false,
+      "date": "2027-01-17T03:30:00Z",
+      "status": "Scheduled",
+      "venue": "RAC Arena",
+      "round": 14,
+      "matchNumber": 35,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Adelaide Lightning",
+      "home": true,
+      "date": "2027-01-22T06:30:00Z",
+      "status": "Scheduled",
+      "venue": "Red Energy Arena",
+      "round": 15,
+      "matchNumber": 37,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Adelaide Lightning",
+      "home": true,
+      "date": "2027-01-22T06:30:00Z",
+      "status": "Scheduled",
+      "venue": "Red Energy Arena",
+      "round": 15,
+      "matchNumber": 37,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Sydney Flames",
+      "home": false,
+      "date": "2027-01-23T04:00:00Z",
+      "status": "Scheduled",
+      "venue": "Quaycentre",
+      "round": 15,
+      "matchNumber": 39,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Southside Melbourne Flyers",
+      "home": true,
+      "date": "2027-01-25T06:30:00Z",
+      "status": "Scheduled",
+      "venue": "Selkirk Stadium, Ballarat",
+      "round": 15,
+      "matchNumber": 42,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Southside Melbourne Flyers",
+      "home": true,
+      "date": "2027-01-25T06:30:00Z",
+      "status": "Scheduled",
+      "venue": "Selkirk Stadium, Ballarat",
+      "round": 15,
+      "matchNumber": 42,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Perth Lynx",
+      "home": true,
+      "date": "2027-01-29T08:00:00Z",
+      "status": "Scheduled",
+      "venue": "AIS Arena",
+      "round": 16,
+      "matchNumber": 45,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Tasmania Jewels",
+      "home": true,
+      "date": "2027-01-31T02:00:00Z",
+      "status": "Scheduled",
+      "venue": "Gippsland Regional Indoor Sports Stadium",
+      "round": 16,
+      "matchNumber": 48,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Tasmania Jewels",
+      "home": true,
+      "date": "2027-01-31T02:00:00Z",
+      "status": "Scheduled",
+      "venue": "Gippsland Regional Indoor Sports Stadium",
+      "round": 16,
+      "matchNumber": 48,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    },
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Townsville Fire",
+      "home": false,
+      "date": "2027-01-31T04:00:00Z",
+      "status": "Scheduled",
+      "venue": "Townsville Entertainment & Convention Centre",
+      "round": 16,
+      "matchNumber": 49,
+      "broadcast": {
+        "providers": [
+          "9Now",
+          "Disney+"
+        ],
+        "note": "League-wide Australian coverage; verify specific stream"
+      }
+    }
+  ],
+  "notes": "Team fixtures only. Player participation not guaranteed. Individual WNBL box scores not yet connected."
+}
