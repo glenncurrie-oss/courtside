@@ -1,0 +1,23 @@
+name: Courtside WNBL source check
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Inspect WNBL 2026-27 source
+        run: python scripts/inspect_wnbl.py
+      - name: Save diagnostic report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wnbl-diagnostic
+          path: wnbl-diagnostic.json
+          if-no-files-found: ignore
