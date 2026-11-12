@@ -1,11 +1,40 @@
 {
   "source": "ESPN NCAA endpoints (unofficial)",
-  "updatedAt": "2026-11-12T00:28:16.040595+00:00",
+  "updatedAt": "2026-11-12T06:42:20.918195+00:00",
   "players": [
     "Monique Bobongie",
     "Dallas Loughridge"
   ],
   "games": [
+    {
+      "id": "401927076",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-11-11T23:30Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Oakland Golden Grizzlies",
+      "teamScore": "91",
+      "opponentScore": "50",
+      "home": true,
+      "status": "post",
+      "stats": {
+        "MIN": "24",
+        "PTS": "15",
+        "FG": "6-8",
+        "3PT": "1-3",
+        "FT": "2-3",
+        "REB": "7",
+        "AST": "2",
+        "TO": "4",
+        "STL": "0",
+        "BLK": "0",
+        "OREB": "3",
+        "DREB": "4",
+        "PF": "0"
+      },
+      "athleteId": "5456282",
+      "headshot": null
+    },
     {
       "id": "401927068",
       "player": "Dallas Loughridge",
@@ -295,9 +324,7 @@
       "status": "pre"
     }
   ],
-  "warnings": [
-    "summary 401931546: IncompleteRead(428094 bytes read)"
-  ],
+  "warnings": [],
   "successful": true,
-  "backfill": true
+  "backfill": false
 }
