@@ -1,0 +1,22 @@
+name: Courtside WNBL box-score source test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inspect public WNBL Game Centre
+        run: python scripts/probe_wnbl_boxscores.py
+      - name: Upload diagnostic even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wnbl-boxscore-diagnostic
+          path: wnbl-boxscore-diagnostic.json
+          if-no-files-found: warn
