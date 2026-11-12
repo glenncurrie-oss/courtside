@@ -1,22 +1,51 @@
-# Courtside — free NBA integration (phase 1)
+# Courtside: Australian NBA broadcast evidence (safe pilot)
 
-This builds on the working standalone Courtside prototype. The watchlist remains in the browser's localStorage (`courtside-watchlist-v1`), so the six initial players and additions are preserved **when opened at the same browser origin**. Moving from a local file to GitHub Pages uses a different origin: export your watchlist from the old app and import it on the hosted version.
+This is a **verified-data pipeline and schedule overlay**, not an automated Australian broadcaster scraper. ESPN's public scoreboard API can supply NBA fixtures and US broadcaster hints, but those hints are **not evidence of Australian coverage**. This release deliberately does **not** automatically label games as ESPN Australia or Prime Video Australia.
 
-## Deploy for free
-1. Create a free GitHub account if needed, then create a **public** repository named `courtside`.
-2. Upload **the contents** of this folder (including `.github/workflows/update.yml`, `scripts/update_nba.py`, `data/nba.json` and `index.html`) to the repository root. The hidden `.github` folder is essential.
-3. Under **Settings → Pages**, choose **Deploy from a branch**, branch `main`, folder `/ (root)`, and save.
-4. Under **Actions → Update Courtside NBA data**, choose **Run workflow**. Wait for success; it commits the refreshed JSON data to the repository.
-5. Visit `https://YOUR-USERNAME.github.io/courtside/`. Updates are scheduled every six hours (GitHub schedule timing is approximate).
+## Upload to GitHub
 
-## Data and limitations
-- ESPN's public endpoints are **unofficial and undocumented**; they may change, be unavailable or restrict automated use. Verify permission and reliability before relying on them long term.
-- The script requests Chicago Bulls fixtures for a 31-day rolling window and box scores for finished games. It accumulates game history on each successful run; it does not backfill an entire career in one run.
-- Player box-score extraction is matched by exact name and team. Missing statistics show `—`, never fabricated zeros. Scheduled team games do not guarantee that Josh will play.
-- The initial JSON is intentionally empty; this environment could not reach the endpoint to prepopulate verified results.
-- Hosting and public-repository GitHub Actions can be free subject to GitHub policies. The website and data are public; do not put private keys in the repository.
-- Other leagues and international games are **not yet integrated**.
-- If GitHub Actions cannot push, review repository **Settings → Actions → General → Workflow permissions**, and permit read/write access.
+Upload these paths to your `glenncurrie-oss/courtside` repository (preserving the folders):
 
-## Local development
-Run `python -m http.server 8000` in this folder and open `http://localhost:8000`. Run `python scripts/update_nba.py` to fetch current data if your network permits. Opening `index.html` as `file://` can block JSON fetches, so test the hosted URL or local HTTP server.
+- `index.html` — replace the existing root website.
+- `scripts/update_broadcasts.py` — new script; does not modify NBA/WNBL collectors.
+- `data/broadcast_verified_au.json` — new editable verified game list.
+- `.github/workflows/broadcasts-au.yml` — new daily workflow.
+
+Run **Actions → Courtside Australian NBA broadcasts → Run workflow**. It creates `data/broadcasts_au.json`. The website reads this file and only shows a **verified Australian broadcaster** when a matching record exists in the verified list.
+
+## Adding a verified Australian listing
+
+After confirming a particular game on an Australian broadcaster's official game page, add a record to `data/broadcast_verified_au.json`:
+
+```json
+{
+  "games": [
+    {
+      "homeTeam": "Chicago Bulls",
+      "awayTeam": "Minnesota Timberwolves",
+      "date": "2026-11-15T01:00:00Z",
+      "providers": ["Prime Video"],
+      "sourceUrl": "https://REPLACE-WITH-ACTUAL-GAME-SPECIFIC-SOURCE",
+      "checkedAt": "2026-11-12"
+    }
+  ]
+}
+```
+
+**Example only:** The game, date, provider and URL in the example are placeholders; do not use them without verification. Use the **exact** UTC tip-off timestamp from the Courtside fixture feed, and the exact home/away team names. Alternatively specify an `espnEventId` if the Courtside game record also contains it. The collector validates providers and requires source evidence. Run the workflow again after changing the verified list.
+
+Accepted providers: Prime Video, ESPN, Disney+, Foxtel, Foxtel Now, Kayo Sports, NBA League Pass, SBS, SBS On Demand, 9Now.
+
+For a verified ESPN Australia game, list the ESPN channel and the relevant Australian subscription access routes if confirmed for that game. Do not copy US ESPN or US Prime Video listings directly into the Australian verified list.
+
+## Reliability
+
+- If ESPN is unavailable, the collector preserves previous schedule candidates; verified records still flow through.
+- The collector is independent of existing NBA/WNBL data updates.
+- The website clearly says *Australian broadcast not yet verified* when there is no verified match.
+- US broadcaster hints are stored only as diagnostic candidates, never rendered as Australian availability.
+- The workflow needs GitHub Actions write permission for committing generated data.
+
+## Future step
+
+For truly automated **confirmed** AU listings, integrate a licensed or officially documented Australian TV-guide API that provides per-game channel and streaming metadata. A US NBA schedule alone cannot reliably confirm Australian availability.
