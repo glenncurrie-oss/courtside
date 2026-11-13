@@ -1,7 +1,7 @@
 {
   "league": "WNBL",
   "season": "2026-27",
-  "updatedAt": "2026-11-12T15:02:29Z",
+  "updatedAt": "2026-11-13T02:54:57Z",
   "source": "https://fixturedownload.azurewebsites.net/feed/json/wnbl-2026",
   "statsSource": "https://schedule.wnbl.com.au/api/calendar/schedule?league=wnbl&limit=500&offset=0&year=2026",
   "games": [
