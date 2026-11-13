@@ -29,6 +29,7 @@ SYDNEY = ZoneInfo('Australia/Sydney')
 EASTERN = ZoneInfo('America/New_York')
 PRIME_URL = 'https://www.nba.com/news/every-nba-game-on-prime-video-in-2026-27'
 PRIME_AU_URL = 'https://www.primevideo.com/region/fe/tournament/amzn1.dv.icid.cf75b42a-68cd-4a1c-993a-a0b3f0575c5f'
+PRIME_ENRICH_URL = 'https://www.primevideo.com/region/fe/api/enrichItemMetadata'
 
 TEAM_ALIASES = {
     'Atlanta Hawks': ['atlanta', 'hawks'], 'Boston Celtics': ['boston', 'celtics'],
@@ -257,7 +258,7 @@ class PrimeAUCards(HTMLParser):
         if self.card is None and tag == 'article' and attrs.get('data-card-entity-type') == 'EVENT':
             self.card = {'title': html.unescape(attrs.get('data-card-title', '')),
                          'entitlement': attrs.get('data-card-entitlement', ''),
-                         'text': [], 'evidence': [], 'hrefs': []}
+                         'text': [], 'evidence': [], 'hrefs': [], 'amazonIds': []}
             self.depth = 1
         elif self.card is not None:
             self.depth += 1 if tag == 'article' else 0
@@ -267,6 +268,12 @@ class PrimeAUCards(HTMLParser):
                     self.card['evidence'].append(attrs[key])
             if tag == 'a' and attrs.get('href'):
                 self.card['hrefs'].append(attrs['href'])
+            # Only collect IDs that occur INSIDE this specific card. Never
+            # associate IDs based on their order elsewhere in the page.
+            for value in attrs.values():
+                if isinstance(value, str):
+                    self.card['amazonIds'].extend(re.findall(
+                        r'amzn1\.dv\.gti\.[0-9a-f-]{36}', value, re.I))
 
     def handle_endtag(self, tag):
         if self.card is not None and tag == 'article':
@@ -297,8 +304,89 @@ def fetch_prime_au_cards():
     return parser.cards
 
 
+def prime_au_enrich(cards):
+    """Best-effort, unauthenticated Amazon enrichment probe.
+
+    This is an undocumented endpoint. Never send cookies, browser tokens,
+    copied impressionData or credentials. Only use provider data when its
+    response key directly matches an ID attached to the SAME event card.
+    """
+    stats = {'requestedIds': 0, 'returnedIds': 0, 'mappedCards': 0,
+             'primeLabels': 0, 'leaguePassLabels': 0, 'status': 'not attempted'}
+    # Prefer Amazon's global title IDs; some cards expose only detail IDs.
+    card_ids = {}
+    for i, card in enumerate(cards):
+        ids = set(card.get('amazonIds') or [])
+        for href in card.get('hrefs', []):
+            m = re.search(r'/detail/([A-Z0-9]{20,40})', href, re.I)
+            if m:
+                ids.add(m.group(1))
+        if ids:
+            card_ids[i] = ids
+    all_ids = sorted(set().union(*card_ids.values())) if card_ids else []
+    if not all_ids:
+        stats['status'] = 'no card IDs'
+        return stats
+    stats['requestedIds'] = len(all_ids)
+    payload = urllib.parse.urlencode({
+        'metadataToEnrich': json.dumps({
+            'placement': 'HOVER', 'playback': True, 'preroll': True,
+            'trailer': True, 'watchlist': False,
+        }, separators=(',', ':')),
+        'titleIDsToEnrich': json.dumps(all_ids),
+        'journeyIngressContext': '',
+        'currentUrl': PRIME_AU_URL,
+    }).encode('utf-8')
+    request = urllib.request.Request(PRIME_ENRICH_URL, data=payload, headers={
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131.0 Safari/537.36',
+        'Accept': 'application/json',
+        'Accept-Language': 'en-AU,en;q=0.9',
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'Origin': 'https://www.primevideo.com',
+        'Referer': PRIME_AU_URL,
+        'X-Requested-With': 'XMLHttpRequest',
+    }, method='POST')
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            response_json = json.load(response)
+        enrichments = response_json.get('enrichments', {})
+        if not isinstance(enrichments, dict):
+            raise ValueError('missing enrichments object')
+        stats['returnedIds'] = len(enrichments)
+        for i, ids in card_ids.items():
+            matching = [enrichments[k] for k in ids if isinstance(enrichments.get(k), dict)]
+            if not matching:
+                continue
+            labels = set()
+            for record in matching:
+                cues = record.get('entitlementCues') or {}
+                logo = (cues.get('providerLogo') or {}).get('message', '')
+                if normalise(logo) == 'nba league pass':
+                    labels.add('NBA League Pass')
+                elif normalise(logo) == 'prime video' and (
+                    (cues.get('focusMessage') or {}).get('message', '').lower() == 'included with prime'
+                    or cues.get('entitlementType') == 'Entitled'
+                ):
+                    labels.add('Prime Video')
+            if len(labels) == 1:
+                cards[i]['apiProvider'] = next(iter(labels))
+                stats['mappedCards'] += 1
+                if cards[i]['apiProvider'] == 'Prime Video':
+                    stats['primeLabels'] += 1
+                else:
+                    stats['leaguePassLabels'] += 1
+        stats['status'] = 'ok'
+    except Exception as exc:
+        # Expected possibility: Amazon may require signed impressionData.
+        # Never fail the working Foxtel collector because of this probe.
+        stats['status'] = f'unavailable ({type(exc).__name__}: {str(exc)[:100]})'
+    return stats
+
+
 def prime_au_provider(card):
     """Require provider-specific evidence; account entitlement by itself is NOT proof."""
+    if card.get('apiProvider') in ('Prime Video', 'NBA League Pass'):
+        return card['apiProvider']
     evidence = card['evidence']
     entitlement = card['entitlement'].lower()
     if 'nba league pass' in evidence or 'nba-league-pass' in evidence:
@@ -423,8 +511,11 @@ def main():
                       'primeIncluded': 0, 'leaguePass': 0, 'unclassified': 0,
                       'ambiguousFixtures': 0, 'noFixture': 0, 'undatedMatches': 0,
                       'providerEvidenceMissing': 0}
+    prime_api_stats = {'status': 'not attempted'}
     try:
-        prime_au_verified, prime_au_stats = prime_au_matches(fetch_prime_au_cards(), candidates, now)
+        prime_cards = fetch_prime_au_cards()
+        prime_api_stats = prime_au_enrich(prime_cards)
+        prime_au_verified, prime_au_stats = prime_au_matches(prime_cards, candidates, now)
     except Exception as exc:
         errors.append(f'Prime Video AU tournament: {exc}')
 
@@ -479,10 +570,10 @@ def main():
         'updatedAt': now.isoformat(timespec='seconds').replace('+00:00', 'Z'),
         'verified': verified, 'candidates': candidates, 'primeCandidates': prime_candidates, 'errors': errors,
         'primeStats': {'publishedListings': len(prime_listings), 'matchedCandidates': len(prime_candidates), 'verifiedAustralianGames': len(prime_au_verified)},
-        'primeAuStats': prime_au_stats,
+        'primeAuStats': prime_au_stats, 'primeApiStats': prime_api_stats,
         'foxtelStats': {'programsFetched': foxtel_programs, 'liveNbaListings': foxtel_live_nba,
                         'matchedListings': len(foxtel_matches)},
-        'notes': 'ESPN verified through Foxtel AU EPG. Prime Video AU event cards verified only when the matchup uniquely identifies an upcoming fixture and explicit provider branding is present. US/global Prime schedule remains candidates only.',
+        'notes': 'ESPN verified through Foxtel AU EPG. Prime Video AU event cards verified only when a matchup uniquely identifies an upcoming fixture and explicit provider branding is present. API enrichment is experimental and never uses account credentials. US/global Prime schedule remains candidates only.',
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     temp = OUT.with_suffix('.tmp')
@@ -492,6 +583,7 @@ def main():
     print(f'Foxtel: {foxtel_programs} programmes; {foxtel_live_nba} live NBA listings; {len(foxtel_matches)} matched ESPN channel listings')
     print(f'Prime Video US: {len(prime_listings)} published listings; {len(prime_candidates)} NBA candidates matched')
     print(f'Prime Video AU: {prime_au_stats["eventCards"]} event cards; {prime_au_stats["matchedFixtures"]} matched; {prime_au_stats["primeIncluded"]} included with Prime; {prime_au_stats["leaguePass"]} League Pass; {prime_au_stats["unclassified"]} unclassified; {prime_au_stats["ambiguousFixtures"]} ambiguous; {prime_au_stats["noFixture"]} without fixture')
+    print(f'Prime Video API: {prime_api_stats.get("status")}; {prime_api_stats.get("requestedIds", 0)} IDs requested; {prime_api_stats.get("returnedIds", 0)} returned; {prime_api_stats.get("mappedCards", 0)} cards labelled')
     for error in errors[:5]:
         print('Warning:', error, file=sys.stderr)
 
