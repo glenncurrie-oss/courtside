@@ -1,7 +1,7 @@
 {
   "market": "AU",
   "league": "NBA",
-  "updatedAt": "2026-11-13T05:14:40Z",
+  "updatedAt": "2026-11-13T05:26:02Z",
   "verified": [
     {
       "espnEventId": "401909984",
@@ -13,7 +13,7 @@
       ],
       "channel": "ESPN",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ESP/events?movieHeight=110&tvShowHeight=90&startDate=1794661200000&endDate=1794747599999&regionId=8336",
-      "checkedAt": "2026-11-13T05:14:40Z",
+      "checkedAt": "2026-11-13T05:26:02Z",
       "programTitle": "Live: NBA Special Edition",
       "episodeTitle": "Timberwolves vs. Bulls",
       "broadcastStart": "2026-11-15T01:00:00Z",
@@ -32,7 +32,7 @@
       ],
       "channel": "ESPN2",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ES2/events?movieHeight=110&tvShowHeight=90&startDate=1794747600000&endDate=1794833999999&regionId=8336",
-      "checkedAt": "2026-11-13T05:14:40Z",
+      "checkedAt": "2026-11-13T05:26:02Z",
       "programTitle": "Live: NBA Special Edition",
       "episodeTitle": "Kings vs. Thunder",
       "broadcastStart": "2026-11-16T02:00:00Z",
@@ -51,7 +51,7 @@
       ],
       "channel": "ESPN2",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ES2/events?movieHeight=110&tvShowHeight=90&startDate=1794834000000&endDate=1794920399999&regionId=8336",
-      "checkedAt": "2026-11-13T05:14:40Z",
+      "checkedAt": "2026-11-13T05:26:02Z",
       "programTitle": "Live: NBA Special Edition",
       "episodeTitle": "Celtics vs. Magic",
       "broadcastStart": "2026-11-17T00:00:00Z",
@@ -70,7 +70,7 @@
       ],
       "channel": "ESPN",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ESP/events?movieHeight=110&tvShowHeight=90&startDate=1794920400000&endDate=1795006799999&regionId=8336",
-      "checkedAt": "2026-11-13T05:14:40Z",
+      "checkedAt": "2026-11-13T05:26:02Z",
       "programTitle": "Live: NBA Special Edition",
       "episodeTitle": "Spurs vs. Pistons",
       "broadcastStart": "2026-11-18T01:00:00Z",
@@ -89,7 +89,7 @@
       ],
       "channel": "ESPN",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ESP/events?movieHeight=110&tvShowHeight=90&startDate=1794920400000&endDate=1795006799999&regionId=8336",
-      "checkedAt": "2026-11-13T05:14:40Z",
+      "checkedAt": "2026-11-13T05:26:02Z",
       "programTitle": "Live: NBA Special Edition",
       "episodeTitle": "Lakers vs. Hornets",
       "broadcastStart": "2026-11-18T04:00:00Z",
@@ -108,7 +108,7 @@
       ],
       "channel": "ESPN",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ESP/events?movieHeight=110&tvShowHeight=90&startDate=1795006800000&endDate=1795093199999&regionId=8336",
-      "checkedAt": "2026-11-13T05:14:40Z",
+      "checkedAt": "2026-11-13T05:26:02Z",
       "programTitle": "Live: NBA Wednesday: Heat vs. Bucks",
       "episodeTitle": "Heat vs. Bucks",
       "broadcastStart": "2026-11-19T00:12:00Z",
@@ -127,7 +127,7 @@
       ],
       "channel": "ESPN",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ESP/events?movieHeight=110&tvShowHeight=90&startDate=1795006800000&endDate=1795093199999&regionId=8336",
-      "checkedAt": "2026-11-13T05:14:40Z",
+      "checkedAt": "2026-11-13T05:26:02Z",
       "programTitle": "Live: NBA Wednesday: Mavericks vs. Warri",
       "episodeTitle": "Mavericks vs. Warriors",
       "broadcastStart": "2026-11-19T02:35:00Z",
@@ -146,7 +146,7 @@
       ],
       "channel": "ESPN2",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ES2/events?movieHeight=110&tvShowHeight=90&startDate=1795093200000&endDate=1795179599999&regionId=8336",
-      "checkedAt": "2026-11-13T05:14:40Z",
+      "checkedAt": "2026-11-13T05:26:02Z",
       "programTitle": "Live: NBA Thursday: Timberwolves vs. Kni",
       "episodeTitle": "Timberwolves vs. Knicks",
       "broadcastStart": "2026-11-20T01:00:00Z",
@@ -864,16 +864,20 @@
   },
   "primeAuStats": {
     "eventCards": 26,
-    "matchedFixtures": 0,
+    "matchedFixtures": 13,
     "verifiedAustralianGames": 0,
     "primeIncluded": 0,
     "leaguePass": 0,
-    "unclassified": 0
+    "unclassified": 13,
+    "ambiguousFixtures": 0,
+    "noFixture": 13,
+    "undatedMatches": 13,
+    "providerEvidenceMissing": 13
   },
   "foxtelStats": {
     "programsFetched": 323,
     "liveNbaListings": 10,
     "matchedListings": 8
   },
-  "notes": "ESPN verified through Foxtel AU EPG. Prime Video AU event cards verified only when matchup, local date, and explicit provider badge agree. US/global Prime schedule remains candidates only."
+  "notes": "ESPN verified through Foxtel AU EPG. Prime Video AU event cards verified only when the matchup uniquely identifies an upcoming fixture and explicit provider branding is present. US/global Prime schedule remains candidates only."
 }
