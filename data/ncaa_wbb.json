@@ -1,11 +1,40 @@
 {
   "source": "ESPN NCAA endpoints (unofficial)",
-  "updatedAt": "2026-11-12T06:42:20.918195+00:00",
+  "updatedAt": "2026-11-13T06:39:20.377487+00:00",
   "players": [
     "Monique Bobongie",
     "Dallas Loughridge"
   ],
   "games": [
+    {
+      "id": "401919324",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-11-13T00:00Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Columbia Lions",
+      "teamScore": "81",
+      "opponentScore": "58",
+      "home": false,
+      "status": "post",
+      "stats": {
+        "MIN": "35",
+        "PTS": "13",
+        "FG": "5-9",
+        "3PT": "2-3",
+        "FT": "1-1",
+        "REB": "2",
+        "AST": "7",
+        "TO": "3",
+        "STL": "2",
+        "BLK": "0",
+        "OREB": "0",
+        "DREB": "2",
+        "PF": "3"
+      },
+      "athleteId": "5455230",
+      "headshot": "https://a.espncdn.com/i/headshots/womens-college-basketball/players/full/5455230.png"
+    },
     {
       "id": "401927076",
       "player": "Monique Bobongie",
