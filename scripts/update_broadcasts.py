@@ -28,6 +28,7 @@ ALLOWED = {'Prime Video', 'ESPN', 'Disney+', 'Foxtel', 'Foxtel Now', 'Kayo Sport
 SYDNEY = ZoneInfo('Australia/Sydney')
 EASTERN = ZoneInfo('America/New_York')
 PRIME_URL = 'https://www.nba.com/news/every-nba-game-on-prime-video-in-2026-27'
+PRIME_AU_URL = 'https://www.primevideo.com/region/fe/tournament/amzn1.dv.icid.cf75b42a-68cd-4a1c-993a-a0b3f0575c5f'
 
 TEAM_ALIASES = {
     'Atlanta Hawks': ['atlanta', 'hawks'], 'Boston Celtics': ['boston', 'celtics'],
@@ -242,6 +243,142 @@ def prime_matches(listings, candidates):
     return list(found.values())
 
 
+
+class PrimeAUCards(HTMLParser):
+    """Read server-rendered Amazon event cards; ignore unrelated team and promo cards."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.cards = []
+        self.depth = 0
+        self.card = None
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if self.card is None and tag == 'article' and attrs.get('data-card-entity-type') == 'EVENT':
+            self.card = {'title': html.unescape(attrs.get('data-card-title', '')),
+                         'entitlement': attrs.get('data-card-entitlement', ''),
+                         'text': [], 'evidence': [], 'hrefs': []}
+            self.depth = 1
+        elif self.card is not None:
+            self.depth += 1 if tag == 'article' else 0
+        if self.card is not None:
+            for key in ('alt', 'aria-label', 'title', 'src', 'srcset'):
+                if attrs.get(key):
+                    self.card['evidence'].append(attrs[key])
+            if tag == 'a' and attrs.get('href'):
+                self.card['hrefs'].append(attrs['href'])
+
+    def handle_endtag(self, tag):
+        if self.card is not None and tag == 'article':
+            self.depth -= 1
+            if self.depth == 0:
+                self.card['text'] = ' '.join(' '.join(self.card['text']).split())
+                self.card['evidence'] = ' '.join(self.card['evidence']).lower()
+                self.cards.append(self.card)
+                self.card = None
+
+    def handle_data(self, data):
+        if self.card is not None:
+            self.card['text'].append(data)
+
+
+def fetch_prime_au_cards():
+    req = urllib.request.Request(PRIME_AU_URL, headers={
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml',
+        'Accept-Language': 'en-AU,en;q=0.9',
+    })
+    with urllib.request.urlopen(req, timeout=25) as response:
+        document = response.read().decode('utf-8', errors='replace')
+    parser = PrimeAUCards()
+    parser.feed(document)
+    if not parser.cards:
+        raise ValueError('No event cards in Amazon AU HTML (possibly geo-blocked or page changed)')
+    return parser.cards
+
+
+def prime_au_provider(card):
+    """Require provider-specific evidence; account entitlement by itself is NOT proof."""
+    evidence = card['evidence']
+    entitlement = card['entitlement'].lower()
+    if 'nba league pass' in evidence or 'nba-league-pass' in evidence:
+        return 'NBA League Pass'
+    # Amazon Prime branding is commonly an image; do not infer Prime solely from Entitled.
+    if entitlement == 'entitled' and re.search(r'prime.video|prime[_/-]logo|/prime/logos|included with prime', evidence):
+        return 'Prime Video'
+    return None
+
+
+def prime_au_matches(cards, candidates, now):
+    """Verify only unique matchup + local-date matches with explicit provider evidence."""
+    matches = {}
+    stats = {'eventCards': len(cards), 'matchedFixtures': 0, 'verifiedAustralianGames': 0,
+             'primeIncluded': 0, 'leaguePass': 0, 'unclassified': 0}
+    for card in cards:
+        title = card['title']
+        sides = re.split(r'\s+(?:vs\.?|v\.?|at|@)\s+', title, maxsplit=1, flags=re.I)
+        if len(sides) != 2:
+            continue
+        # Date in Amazon's Australian locale can be e.g. 'Sat, Nov 14' or '14 Nov'.
+        text = card['text']
+        dates = []
+        month_names = {m.lower(): i for i, m in enumerate(('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'), 1)}
+        for m in re.finditer(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})\b', text, re.I):
+            dates.append((month_names[m.group(1)[:3].lower()], int(m.group(2))))
+        for m in re.finditer(r'\b(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\b', text, re.I):
+            dates.append((month_names[m.group(2)[:3].lower()], int(m.group(1))))
+        dates = list(dict.fromkeys(dates))
+        if not dates:
+            continue
+        matched = []
+        for candidate in candidates:
+            start = parse_date(candidate.get('date'))
+            if not start:
+                continue
+            local = start.astimezone(SYDNEY)
+            if (local.month, local.day) not in dates:
+                continue
+            home, away = candidate.get('homeTeam', ''), candidate.get('awayTeam', '')
+            if ((team_mentioned(sides[0], home) and team_mentioned(sides[1], away)) or
+                (team_mentioned(sides[1], home) and team_mentioned(sides[0], away))):
+                matched.append(candidate)
+        if len(matched) != 1:
+            continue
+        stats['matchedFixtures'] += 1
+        provider = prime_au_provider(card)
+        if not provider:
+            stats['unclassified'] += 1
+            continue
+        candidate = matched[0]
+        event_id = candidate['espnEventId']
+        if not event_id:
+            continue
+        url = PRIME_AU_URL
+        for href in card['hrefs']:
+            if '/detail/' in href:
+                url = urllib.parse.urljoin('https://www.primevideo.com', href)
+                break
+        entry = {
+            'espnEventId': event_id, 'date': candidate['date'],
+            'homeTeam': candidate['homeTeam'], 'awayTeam': candidate['awayTeam'],
+            'providers': [provider], 'sourceUrl': url,
+            'checkedAt': now.isoformat(timespec='seconds').replace('+00:00', 'Z'),
+            'league': 'NBA', 'market': 'AU', 'status': 'verified',
+            'verificationMethod': 'prime_au_html_matchup_date_provider_badge',
+            'primeEntitlement': card['entitlement'],
+        }
+        if event_id in matches:
+            # If contradictory cards for one event, avoid verifying it.
+            if matches[event_id]['providers'] != [provider]:
+                matches[event_id] = None
+        else:
+            matches[event_id] = entry
+    matches = {key: value for key, value in matches.items() if value is not None}
+    stats['verifiedAustralianGames'] = len(matches)
+    stats['primeIncluded'] = sum('Prime Video' in v['providers'] for v in matches.values())
+    stats['leaguePass'] = sum('NBA League Pass' in v['providers'] for v in matches.values())
+    return list(matches.values()), stats
+
 def main():
     now = datetime.now(timezone.utc)
     manual = read_json(VERIFIED, {'games': []})
@@ -281,6 +418,14 @@ def main():
         if OUT.exists():
             prime_candidates = read_json(OUT, {}).get('primeCandidates', [])
 
+    prime_au_verified = []
+    prime_au_stats = {'eventCards': 0, 'matchedFixtures': 0, 'verifiedAustralianGames': 0,
+                      'primeIncluded': 0, 'leaguePass': 0, 'unclassified': 0}
+    try:
+        prime_au_verified, prime_au_stats = prime_au_matches(fetch_prime_au_cards(), candidates, now)
+    except Exception as exc:
+        errors.append(f'Prime Video AU tournament: {exc}')
+
     foxtel_programs = 0
     foxtel_live_nba = 0
     foxtel_matches = {}
@@ -315,13 +460,14 @@ def main():
                 errors.append(f'Foxtel {channel_name} {day}: {exc}')
 
     # Combine manual and automated evidence; retain manually supplied providers.
-    for entry in foxtel_matches.values():
+    for entry in list(foxtel_matches.values()) + prime_au_verified:
         existing = next((r for r in verified if str(r.get('espnEventId', '')) == entry['espnEventId']), None)
         if existing:
             existing['providers'] = list(dict.fromkeys(existing['providers'] + entry['providers']))
             existing.setdefault('additionalSources', []).append({
-                'provider': 'ESPN', 'channel': entry['channel'], 'sourceUrl': entry['sourceUrl'],
-                'checkedAt': entry['checkedAt'], 'programTitle': entry['programTitle'],
+                'provider': entry['providers'][0], 'channel': entry.get('channel'),
+                'sourceUrl': entry['sourceUrl'], 'checkedAt': entry['checkedAt'],
+                'programTitle': entry.get('programTitle'),
             })
         else:
             verified.append(entry)
@@ -330,10 +476,11 @@ def main():
         'market': 'AU', 'league': 'NBA',
         'updatedAt': now.isoformat(timespec='seconds').replace('+00:00', 'Z'),
         'verified': verified, 'candidates': candidates, 'primeCandidates': prime_candidates, 'errors': errors,
-        'primeStats': {'publishedListings': len(prime_listings), 'matchedCandidates': len(prime_candidates), 'verifiedAustralianGames': 0},
+        'primeStats': {'publishedListings': len(prime_listings), 'matchedCandidates': len(prime_candidates), 'verifiedAustralianGames': len(prime_au_verified)},
+        'primeAuStats': prime_au_stats,
         'foxtelStats': {'programsFetched': foxtel_programs, 'liveNbaListings': foxtel_live_nba,
                         'matchedListings': len(foxtel_matches)},
-        'notes': 'ESPN verified through Foxtel AU EPG. Prime Video official US/global schedule is matched as candidates only; independent Australian availability is required before verification.',
+        'notes': 'ESPN verified through Foxtel AU EPG. Prime Video AU event cards verified only when matchup, local date, and explicit provider badge agree. US/global Prime schedule remains candidates only.',
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     temp = OUT.with_suffix('.tmp')
@@ -341,7 +488,8 @@ def main():
     os.replace(temp, OUT)
     print(f'AU broadcasts: {len(verified)} verified games; {len(candidates)} NBA schedule candidates; {len(errors)} fetch warnings')
     print(f'Foxtel: {foxtel_programs} programmes; {foxtel_live_nba} live NBA listings; {len(foxtel_matches)} matched ESPN channel listings')
-    print(f'Prime Video: {len(prime_listings)} published listings; {len(prime_candidates)} NBA candidates matched; 0 automatically AU verified')
+    print(f'Prime Video US: {len(prime_listings)} published listings; {len(prime_candidates)} NBA candidates matched')
+    print(f'Prime Video AU: {prime_au_stats["eventCards"]} event cards; {prime_au_stats["matchedFixtures"]} matched; {prime_au_stats["primeIncluded"]} included with Prime; {prime_au_stats["leaguePass"]} League Pass; {prime_au_stats["unclassified"]} unclassified')
     for error in errors[:5]:
         print('Warning:', error, file=sys.stderr)
 
