@@ -6,6 +6,8 @@ Foxtel EPG listings are matched to NBA fixtures by both teams and start time.
 Existing manually verified entries remain supported.
 """
 import json
+import html
+from html.parser import HTMLParser
 import os
 import re
 import sys
@@ -24,6 +26,8 @@ FOX_REGION = os.environ.get('COURTSIDE_FOXTEL_REGION', '8336')
 CHANNELS = {'ESP': 'ESPN', 'ES2': 'ESPN2'}
 ALLOWED = {'Prime Video', 'ESPN', 'Disney+', 'Foxtel', 'Foxtel Now', 'Kayo Sports', 'NBA League Pass', 'SBS', 'SBS On Demand', '9Now'}
 SYDNEY = ZoneInfo('Australia/Sydney')
+EASTERN = ZoneInfo('America/New_York')
+PRIME_URL = 'https://www.nba.com/news/every-nba-game-on-prime-video-in-2026-27'
 
 TEAM_ALIASES = {
     'Atlanta Hawks': ['atlanta', 'hawks'], 'Boston Celtics': ['boston', 'celtics'],
@@ -154,6 +158,90 @@ def match_foxtel(event, candidates):
     return matches[0][1]
 
 
+class ListItems(HTMLParser):
+    """Extract text from HTML list items without third-party dependencies."""
+    def __init__(self):
+        super().__init__()
+        self.depth = 0
+        self.current = []
+        self.items = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'li':
+            if self.depth == 0:
+                self.current = []
+            self.depth += 1
+
+    def handle_endtag(self, tag):
+        if tag == 'li' and self.depth:
+            self.depth -= 1
+            if not self.depth:
+                self.items.append(html.unescape(' '.join(self.current)).strip())
+
+    def handle_data(self, data):
+        if self.depth:
+            self.current.append(data)
+
+
+def fetch_prime_listings():
+    req = urllib.request.Request(PRIME_URL, headers={
+        'User-Agent': 'Mozilla/5.0 (compatible; Courtside/1.2)',
+        'Accept': 'text/html',
+    })
+    with urllib.request.urlopen(req, timeout=20) as response:
+        document = response.read().decode('utf-8', errors='replace')
+    parser = ListItems()
+    parser.feed(document)
+    # Official schedule uses US Eastern dates and times; convert using DST-aware zone.
+    pattern = re.compile(r'\b([A-Z][a-z]{2})\.?\s+(\d{1,2}):\s*(.*?)\s+[—–-]\s*(\d{1,2})(?::(\d{2}))?\s*(a\.?m\.?|p\.?m\.?)\s*ET\b', re.I)
+    months = {name: i for i, name in enumerate(('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'), 1)}
+    listings = []
+    for item in parser.items:
+        match = pattern.search(' '.join(item.split()))
+        if not match:
+            continue
+        month, day, matchup, hour, minute, meridiem = match.groups()
+        month_num = months.get(month.title())
+        if not month_num:
+            continue
+        year = 2026 if month_num >= 10 else 2027
+        hour = int(hour) % 12 + (12 if meridiem.lower().startswith('p') else 0)
+        local = datetime(year, month_num, int(day), hour, int(minute or 0), tzinfo=EASTERN)
+        listings.append({'matchup': matchup.strip(), 'startUtc': local.astimezone(timezone.utc), 'publishedText': item})
+    if not listings:
+        raise ValueError('No dated Prime Video games parsed; official page may have changed')
+    return listings
+
+
+def prime_matches(listings, candidates):
+    """Conservative exact game matching; source is US/global, not AU verification."""
+    found = {}
+    for listing in listings:
+        matchup = listing['matchup']
+        parts = re.split(r'\s+(?:vs\.?|at|@)\s+', matchup, maxsplit=1, flags=re.I)
+        if len(parts) != 2:
+            continue
+        matching = []
+        for candidate in candidates:
+            start = parse_date(candidate.get('date'))
+            if not start or abs((start - listing['startUtc']).total_seconds()) > 90 * 60:
+                continue
+            home, away = candidate.get('homeTeam', ''), candidate.get('awayTeam', '')
+            if ((team_mentioned(parts[0], home) and team_mentioned(parts[1], away)) or
+                (team_mentioned(parts[1], home) and team_mentioned(parts[0], away))):
+                matching.append(candidate)
+        if len(matching) == 1:
+            candidate = matching[0]
+            found[candidate['espnEventId']] = {
+                'espnEventId': candidate['espnEventId'], 'date': candidate['date'],
+                'homeTeam': candidate['homeTeam'], 'awayTeam': candidate['awayTeam'],
+                'provider': 'Prime Video', 'sourceUrl': PRIME_URL,
+                'sourceMarket': 'US/global', 'market': 'AU', 'status': 'candidate',
+                'note': 'Official Prime Video schedule match; Australian availability NOT independently verified',
+            }
+    return list(found.values())
+
+
 def main():
     now = datetime.now(timezone.utc)
     manual = read_json(VERIFIED, {'games': []})
@@ -181,6 +269,17 @@ def main():
             errors.append(f'NBA {day}: {exc}')
     if not candidates and OUT.exists():
         candidates = read_json(OUT, {}).get('candidates', [])
+
+    prime_listings = []
+    prime_candidates = []
+    try:
+        prime_listings = fetch_prime_listings()
+        prime_candidates = prime_matches(prime_listings, candidates)
+    except Exception as exc:
+        errors.append(f'Prime Video official schedule: {exc}')
+        # Preserve earlier Prime candidates if official page is temporarily unavailable.
+        if OUT.exists():
+            prime_candidates = read_json(OUT, {}).get('primeCandidates', [])
 
     foxtel_programs = 0
     foxtel_live_nba = 0
@@ -230,10 +329,11 @@ def main():
     result = {
         'market': 'AU', 'league': 'NBA',
         'updatedAt': now.isoformat(timespec='seconds').replace('+00:00', 'Z'),
-        'verified': verified, 'candidates': candidates, 'errors': errors,
+        'verified': verified, 'candidates': candidates, 'primeCandidates': prime_candidates, 'errors': errors,
+        'primeStats': {'publishedListings': len(prime_listings), 'matchedCandidates': len(prime_candidates), 'verifiedAustralianGames': 0},
         'foxtelStats': {'programsFetched': foxtel_programs, 'liveNbaListings': foxtel_live_nba,
                         'matchedListings': len(foxtel_matches)},
-        'notes': 'ESPN scoreboard hints are US-oriented. ESPN is confirmed only by a live Foxtel EPG listing matching both teams and tip-off time. Other providers require independent evidence.',
+        'notes': 'ESPN verified through Foxtel AU EPG. Prime Video official US/global schedule is matched as candidates only; independent Australian availability is required before verification.',
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     temp = OUT.with_suffix('.tmp')
@@ -241,6 +341,7 @@ def main():
     os.replace(temp, OUT)
     print(f'AU broadcasts: {len(verified)} verified games; {len(candidates)} NBA schedule candidates; {len(errors)} fetch warnings')
     print(f'Foxtel: {foxtel_programs} programmes; {foxtel_live_nba} live NBA listings; {len(foxtel_matches)} matched ESPN channel listings')
+    print(f'Prime Video: {len(prime_listings)} published listings; {len(prime_candidates)} NBA candidates matched; 0 automatically AU verified')
     for error in errors[:5]:
         print('Warning:', error, file=sys.stderr)
 
