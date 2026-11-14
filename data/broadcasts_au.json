@@ -1,7 +1,7 @@
 {
   "market": "AU",
   "league": "NBA",
-  "updatedAt": "2026-11-13T20:08:35Z",
+  "updatedAt": "2026-11-14T19:56:14Z",
   "verified": [
     {
       "espnEventId": "401909984",
@@ -13,7 +13,7 @@
       ],
       "channel": "ESPN",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ESP/events?movieHeight=110&tvShowHeight=90&startDate=1794661200000&endDate=1794747599999&regionId=8336",
-      "checkedAt": "2026-11-13T20:08:35Z",
+      "checkedAt": "2026-11-14T19:56:14Z",
       "programTitle": "Live: NBA Special Edition",
       "episodeTitle": "Timberwolves vs. Bulls",
       "broadcastStart": "2026-11-15T01:00:00Z",
@@ -32,7 +32,7 @@
       ],
       "channel": "ESPN2",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ES2/events?movieHeight=110&tvShowHeight=90&startDate=1794747600000&endDate=1794833999999&regionId=8336",
-      "checkedAt": "2026-11-13T20:08:35Z",
+      "checkedAt": "2026-11-14T19:56:14Z",
       "programTitle": "Live: NBA Special Edition",
       "episodeTitle": "Kings vs. Thunder",
       "broadcastStart": "2026-11-16T02:00:00Z",
@@ -51,7 +51,7 @@
       ],
       "channel": "ESPN2",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ES2/events?movieHeight=110&tvShowHeight=90&startDate=1794834000000&endDate=1794920399999&regionId=8336",
-      "checkedAt": "2026-11-13T20:08:35Z",
+      "checkedAt": "2026-11-14T19:56:14Z",
       "programTitle": "Live: NBA Special Edition",
       "episodeTitle": "Celtics vs. Magic",
       "broadcastStart": "2026-11-17T00:00:00Z",
@@ -70,7 +70,7 @@
       ],
       "channel": "ESPN",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ESP/events?movieHeight=110&tvShowHeight=90&startDate=1794920400000&endDate=1795006799999&regionId=8336",
-      "checkedAt": "2026-11-13T20:08:35Z",
+      "checkedAt": "2026-11-14T19:56:14Z",
       "programTitle": "Live: NBA Special Edition",
       "episodeTitle": "Spurs vs. Pistons",
       "broadcastStart": "2026-11-18T01:00:00Z",
@@ -89,7 +89,7 @@
       ],
       "channel": "ESPN",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ESP/events?movieHeight=110&tvShowHeight=90&startDate=1794920400000&endDate=1795006799999&regionId=8336",
-      "checkedAt": "2026-11-13T20:08:35Z",
+      "checkedAt": "2026-11-14T19:56:14Z",
       "programTitle": "Live: NBA Special Edition",
       "episodeTitle": "Lakers vs. Hornets",
       "broadcastStart": "2026-11-18T04:00:00Z",
@@ -108,29 +108,10 @@
       ],
       "channel": "ESPN",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ESP/events?movieHeight=110&tvShowHeight=90&startDate=1795006800000&endDate=1795093199999&regionId=8336",
-      "checkedAt": "2026-11-13T20:08:35Z",
+      "checkedAt": "2026-11-14T19:56:14Z",
       "programTitle": "Live: NBA Wednesday: Heat vs. Bucks",
       "episodeTitle": "Heat vs. Bucks",
       "broadcastStart": "2026-11-19T00:12:00Z",
-      "league": "NBA",
-      "market": "AU",
-      "status": "verified",
-      "verificationMethod": "foxtel_epg_team_and_time"
-    },
-    {
-      "espnEventId": "401910016",
-      "date": "2026-11-19T02:30Z",
-      "homeTeam": "Dallas Mavericks",
-      "awayTeam": "Golden State Warriors",
-      "providers": [
-        "ESPN"
-      ],
-      "channel": "ESPN",
-      "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ESP/events?movieHeight=110&tvShowHeight=90&startDate=1795006800000&endDate=1795093199999&regionId=8336",
-      "checkedAt": "2026-11-13T20:08:35Z",
-      "programTitle": "Live: NBA Wednesday: Mavericks vs. Warri",
-      "episodeTitle": "Mavericks vs. Warriors",
-      "broadcastStart": "2026-11-19T02:35:00Z",
       "league": "NBA",
       "market": "AU",
       "status": "verified",
@@ -146,7 +127,7 @@
       ],
       "channel": "ESPN2",
       "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ES2/events?movieHeight=110&tvShowHeight=90&startDate=1795093200000&endDate=1795179599999&regionId=8336",
-      "checkedAt": "2026-11-13T20:08:35Z",
+      "checkedAt": "2026-11-14T19:56:14Z",
       "programTitle": "Live: NBA Thursday: Timberwolves vs. Kni",
       "episodeTitle": "Timberwolves vs. Knicks",
       "broadcastStart": "2026-11-20T01:00:00Z",
@@ -154,105 +135,28 @@
       "market": "AU",
       "status": "verified",
       "verificationMethod": "foxtel_epg_team_and_time"
+    },
+    {
+      "espnEventId": "401910026",
+      "date": "2026-11-22T01:00Z",
+      "homeTeam": "Minnesota Timberwolves",
+      "awayTeam": "Memphis Grizzlies",
+      "providers": [
+        "ESPN"
+      ],
+      "channel": "ESPN",
+      "sourceUrl": "https://www.foxtel.com.au/webepg/ws/foxtel/channel/ESP/events?movieHeight=110&tvShowHeight=90&startDate=1795266000000&endDate=1795352399999&regionId=8336",
+      "checkedAt": "2026-11-14T19:56:14Z",
+      "programTitle": "Live: NBA Special Edition",
+      "episodeTitle": "Timberwolves vs. Grizzlies",
+      "broadcastStart": "2026-11-22T01:00:00Z",
+      "league": "NBA",
+      "market": "AU",
+      "status": "verified",
+      "verificationMethod": "foxtel_epg_team_and_time"
     }
   ],
   "candidates": [
-    {
-      "espnEventId": "401909296",
-      "date": "2026-11-14T00:00Z",
-      "homeTeam": "Indiana Pacers",
-      "awayTeam": "New York Knicks",
-      "usBroadcastHints": [
-        "Prime Video"
-      ],
-      "note": "US-oriented source; NOT Australian broadcast confirmation"
-    },
-    {
-      "espnEventId": "401909297",
-      "date": "2026-11-14T00:00Z",
-      "homeTeam": "Orlando Magic",
-      "awayTeam": "Milwaukee Bucks",
-      "usBroadcastHints": [
-        "Bucks App",
-        "MyMi"
-      ],
-      "note": "US-oriented source; NOT Australian broadcast confirmation"
-    },
-    {
-      "espnEventId": "401909298",
-      "date": "2026-11-14T01:00Z",
-      "homeTeam": "Miami Heat",
-      "awayTeam": "Cleveland Cavaliers",
-      "usBroadcastHints": [
-        "DAZN CLE"
-      ],
-      "note": "US-oriented source; NOT Australian broadcast confirmation"
-    },
-    {
-      "espnEventId": "401909299",
-      "date": "2026-11-14T01:00Z",
-      "homeTeam": "Chicago Bulls",
-      "awayTeam": "Atlanta Hawks",
-      "usBroadcastHints": [],
-      "note": "US-oriented source; NOT Australian broadcast confirmation"
-    },
-    {
-      "espnEventId": "401909300",
-      "date": "2026-11-14T01:00Z",
-      "homeTeam": "New Orleans Pelicans",
-      "awayTeam": "Memphis Grizzlies",
-      "usBroadcastHints": [
-        "DAZN MEM",
-        "GCSEN",
-        "Pelicans.com"
-      ],
-      "note": "US-oriented source; NOT Australian broadcast confirmation"
-    },
-    {
-      "espnEventId": "401909301",
-      "date": "2026-11-14T01:30Z",
-      "homeTeam": "Houston Rockets",
-      "awayTeam": "Utah Jazz",
-      "usBroadcastHints": [
-        "Jazz+",
-        "KJZZ-TV"
-      ],
-      "note": "US-oriented source; NOT Australian broadcast confirmation"
-    },
-    {
-      "espnEventId": "401909302",
-      "date": "2026-11-14T02:30Z",
-      "homeTeam": "San Antonio Spurs",
-      "awayTeam": "Golden State Warriors",
-      "usBroadcastHints": [
-        "Prime Video"
-      ],
-      "note": "US-oriented source; NOT Australian broadcast confirmation"
-    },
-    {
-      "espnEventId": "401909303",
-      "date": "2026-11-14T03:00Z",
-      "homeTeam": "Sacramento Kings",
-      "awayTeam": "Portland Trail Blazers",
-      "usBroadcastHints": [
-        "BlazerVision",
-        "KUNP 16"
-      ],
-      "note": "US-oriented source; NOT Australian broadcast confirmation"
-    },
-    {
-      "espnEventId": "401909304",
-      "date": "2026-11-14T03:30Z",
-      "homeTeam": "LA Clippers",
-      "awayTeam": "Oklahoma City Thunder",
-      "usBroadcastHints": [
-        "ClipperVision",
-        "KSBI",
-        "KTLA",
-        "Thunder App"
-      ],
-      "note": "US-oriented source; NOT Australian broadcast confirmation"
-    },
     {
       "espnEventId": "401909980",
       "date": "2026-11-15T00:00Z",
@@ -621,22 +525,23 @@
       "note": "US-oriented source; NOT Australian broadcast confirmation"
     },
     {
-      "espnEventId": "401910015",
-      "date": "2026-11-19T02:00Z",
-      "homeTeam": "Denver Nuggets",
-      "awayTeam": "Boston Celtics",
-      "usBroadcastHints": [],
-      "note": "US-oriented source; NOT Australian broadcast confirmation"
-    },
-    {
       "espnEventId": "401910016",
-      "date": "2026-11-19T02:30Z",
+      "date": "2026-11-19T01:00Z",
       "homeTeam": "Dallas Mavericks",
       "awayTeam": "Golden State Warriors",
       "usBroadcastHints": [
-        "ESPN",
         "KFAA-TV",
         "MavsTV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910015",
+      "date": "2026-11-19T02:30Z",
+      "homeTeam": "Denver Nuggets",
+      "awayTeam": "Boston Celtics",
+      "usBroadcastHints": [
+        "ESPN"
       ],
       "note": "US-oriented source; NOT Australian broadcast confirmation"
     },
@@ -804,33 +709,77 @@
         "Spectrum Sports Net +"
       ],
       "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910023",
+      "date": "2026-11-21T18:00Z",
+      "homeTeam": "Philadelphia 76ers",
+      "awayTeam": "Milwaukee Bucks",
+      "usBroadcastHints": [
+        "Bucks App",
+        "MyMi"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910024",
+      "date": "2026-11-22T00:30Z",
+      "homeTeam": "New York Knicks",
+      "awayTeam": "Portland Trail Blazers",
+      "usBroadcastHints": [
+        "BlazerVision",
+        "KUNP 16",
+        "NBA TV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910025",
+      "date": "2026-11-22T01:00Z",
+      "homeTeam": "Dallas Mavericks",
+      "awayTeam": "LA Clippers",
+      "usBroadcastHints": [
+        "ClipperVision",
+        "KFAA-TV",
+        "MavsTV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910026",
+      "date": "2026-11-22T01:00Z",
+      "homeTeam": "Minnesota Timberwolves",
+      "awayTeam": "Memphis Grizzlies",
+      "usBroadcastHints": [
+        "DAZN MEM",
+        "DAZN MIN"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910027",
+      "date": "2026-11-22T01:00Z",
+      "homeTeam": "San Antonio Spurs",
+      "awayTeam": "New Orleans Pelicans",
+      "usBroadcastHints": [
+        "DAZN SAS",
+        "GCSEN",
+        "Pelicans.com"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
+    },
+    {
+      "espnEventId": "401910028",
+      "date": "2026-11-22T03:00Z",
+      "homeTeam": "Sacramento Kings",
+      "awayTeam": "Boston Celtics",
+      "usBroadcastHints": [
+        "NBA TV"
+      ],
+      "note": "US-oriented source; NOT Australian broadcast confirmation"
     }
   ],
   "primeCandidates": [
-    {
-      "espnEventId": "401909296",
-      "date": "2026-11-14T00:00Z",
-      "homeTeam": "Indiana Pacers",
-      "awayTeam": "New York Knicks",
-      "provider": "Prime Video",
-      "sourceUrl": "https://www.nba.com/news/every-nba-game-on-prime-video-in-2026-27",
-      "sourceMarket": "US/global",
-      "market": "AU",
-      "status": "candidate",
-      "note": "Official Prime Video schedule match; Australian availability NOT independently verified"
-    },
-    {
-      "espnEventId": "401909302",
-      "date": "2026-11-14T02:30Z",
-      "homeTeam": "San Antonio Spurs",
-      "awayTeam": "Golden State Warriors",
-      "provider": "Prime Video",
-      "sourceUrl": "https://www.nba.com/news/every-nba-game-on-prime-video-in-2026-27",
-      "sourceMarket": "US/global",
-      "market": "AU",
-      "status": "candidate",
-      "note": "Official Prime Video schedule match; Australian availability NOT independently verified"
-    },
     {
       "espnEventId": "401909308",
       "date": "2026-11-21T00:30Z",
@@ -859,20 +808,20 @@
   "errors": [],
   "primeStats": {
     "publishedListings": 60,
-    "matchedCandidates": 4,
+    "matchedCandidates": 2,
     "verifiedAustralianGames": 0
   },
   "primeAuStats": {
     "eventCards": 26,
-    "matchedFixtures": 13,
+    "matchedFixtures": 12,
     "verifiedAustralianGames": 0,
     "primeIncluded": 0,
     "leaguePass": 0,
-    "unclassified": 13,
-    "ambiguousFixtures": 0,
+    "unclassified": 12,
+    "ambiguousFixtures": 1,
     "noFixture": 13,
-    "undatedMatches": 13,
-    "providerEvidenceMissing": 13
+    "undatedMatches": 12,
+    "providerEvidenceMissing": 12
   },
   "primeApiStats": {
     "requestedIds": 52,
@@ -883,8 +832,8 @@
     "status": "unavailable (HTTPError: HTTP Error 307: Temporary Redirect)"
   },
   "foxtelStats": {
-    "programsFetched": 320,
-    "liveNbaListings": 9,
+    "programsFetched": 312,
+    "liveNbaListings": 10,
     "matchedListings": 8
   },
   "notes": "ESPN verified through Foxtel AU EPG. Prime Video AU event cards verified only when a matchup uniquely identifies an upcoming fixture and explicit provider branding is present. API enrichment is experimental and never uses account credentials. US/global Prime schedule remains candidates only."
