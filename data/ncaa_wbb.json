@@ -1,6 +1,6 @@
 {
   "source": "ESPN NCAA endpoints (unofficial)",
-  "updatedAt": "2026-11-13T06:39:20.377487+00:00",
+  "updatedAt": "2026-11-14T06:31:22.951092+00:00",
   "players": [
     "Monique Bobongie",
     "Dallas Loughridge"
@@ -183,16 +183,6 @@
   ],
   "upcoming": [
     {
-      "id": "401919324",
-      "player": "Dallas Loughridge",
-      "league": "NCAA WBB",
-      "date": "2026-11-13T00:00Z",
-      "team": "Michigan Wolverines",
-      "opponent": "Columbia Lions",
-      "home": false,
-      "status": "pre"
-    },
-    {
       "id": "401913858",
       "player": "Monique Bobongie",
       "league": "NCAA WBB",
@@ -349,6 +339,16 @@
       "date": "2026-12-13T19:00Z",
       "team": "Michigan State Spartans",
       "opponent": "DePaul Blue Demons",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401927080",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-12-19T19:00Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Gonzaga Bulldogs",
       "home": true,
       "status": "pre"
     }
