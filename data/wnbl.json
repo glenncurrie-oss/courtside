@@ -1,10 +1,72 @@
 {
   "league": "WNBL",
   "season": "2026-27",
-  "updatedAt": "2026-11-14T02:57:25Z",
+  "updatedAt": "2026-11-14T14:50:29Z",
   "source": "https://fixturedownload.azurewebsites.net/feed/json/wnbl-2026",
   "statsSource": "https://schedule.wnbl.com.au/api/calendar/schedule?league=wnbl&limit=500&offset=0&year=2026",
   "games": [
+    {
+      "player": "Jade Melbourne",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Sydney Flames",
+      "home": true,
+      "date": "2026-11-14T04:00:00Z",
+      "status": "Final",
+      "venue": "Red Energy Arena",
+      "round": "5",
+      "matchId": "69e60906-7351-11f1-b206-273e9abae28c",
+      "id": "wnbl:69e60906-7351-11f1-b206-273e9abae28c:jade-melbourne",
+      "homeScore": 97,
+      "awayScore": 70,
+      "teamScore": 97,
+      "opponentScore": 70,
+      "source": "https://schedule.wnbl.com.au/api/calendar/match?match=69e60906-7351-11f1-b206-273e9abae28c&league=wnbl",
+      "points": 25,
+      "rebounds": 8,
+      "assists": 7,
+      "steals": 0,
+      "blocks": 0,
+      "turnovers": 2,
+      "minutes": "30:28",
+      "fieldGoalsMade": 8,
+      "fieldGoalsAttempted": 14,
+      "threePointsMade": 4,
+      "threePointsAttempted": 7,
+      "freeThrowsMade": 5,
+      "freeThrowsAttempted": 8
+    },
+    {
+      "player": "Isobel Borlase",
+      "league": "WNBL",
+      "team": "Bendigo Spirit",
+      "opponent": "Sydney Flames",
+      "home": true,
+      "date": "2026-11-14T04:00:00Z",
+      "status": "Final",
+      "venue": "Red Energy Arena",
+      "round": "5",
+      "matchId": "69e60906-7351-11f1-b206-273e9abae28c",
+      "id": "wnbl:69e60906-7351-11f1-b206-273e9abae28c:isobel-borlase",
+      "homeScore": 97,
+      "awayScore": 70,
+      "teamScore": 97,
+      "opponentScore": 70,
+      "source": "https://schedule.wnbl.com.au/api/calendar/match?match=69e60906-7351-11f1-b206-273e9abae28c&league=wnbl",
+      "points": 22,
+      "rebounds": 4,
+      "assists": 5,
+      "steals": 2,
+      "blocks": 1,
+      "turnovers": 2,
+      "minutes": "31:26",
+      "fieldGoalsMade": 9,
+      "fieldGoalsAttempted": 16,
+      "threePointsMade": 1,
+      "threePointsAttempted": 3,
+      "freeThrowsMade": 3,
+      "freeThrowsAttempted": 5
+    },
     {
       "player": "Jade Melbourne",
       "league": "WNBL",
@@ -317,44 +379,6 @@
     }
   ],
   "upcoming": [
-    {
-      "player": "Isobel Borlase",
-      "league": "WNBL",
-      "team": "Bendigo Spirit",
-      "opponent": "Sydney Flames",
-      "home": true,
-      "date": "2026-11-14T04:00:00Z",
-      "status": "Scheduled",
-      "venue": "Red Energy Arena",
-      "round": 5,
-      "matchNumber": 74,
-      "broadcast": {
-        "providers": [
-          "9Now",
-          "Disney+"
-        ],
-        "note": "League-wide Australian coverage; verify specific stream"
-      }
-    },
-    {
-      "player": "Jade Melbourne",
-      "league": "WNBL",
-      "team": "Bendigo Spirit",
-      "opponent": "Sydney Flames",
-      "home": true,
-      "date": "2026-11-14T04:00:00Z",
-      "status": "Scheduled",
-      "venue": "Red Energy Arena",
-      "round": 5,
-      "matchNumber": 74,
-      "broadcast": {
-        "providers": [
-          "9Now",
-          "Disney+"
-        ],
-        "note": "League-wide Australian coverage; verify specific stream"
-      }
-    },
     {
       "player": "Nyadiew Puoch",
       "league": "WNBL",
