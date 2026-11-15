@@ -1,10 +1,41 @@
 {
   "league": "WNBL",
   "season": "2026-27",
-  "updatedAt": "2026-11-15T02:56:13Z",
+  "updatedAt": "2026-11-15T14:51:21Z",
   "source": "https://fixturedownload.azurewebsites.net/feed/json/wnbl-2026",
   "statsSource": "https://schedule.wnbl.com.au/api/calendar/schedule?league=wnbl&limit=500&offset=0&year=2026",
   "games": [
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Townsville Fire",
+      "home": true,
+      "date": "2026-11-15T04:00:00Z",
+      "status": "Final",
+      "venue": "AIS Arena",
+      "round": "5",
+      "matchId": "69e98cd7-7351-11f1-beaa-efdb90f529db",
+      "id": "wnbl:69e98cd7-7351-11f1-beaa-efdb90f529db:nyadiew-puoch",
+      "homeScore": 78,
+      "awayScore": 85,
+      "teamScore": 78,
+      "opponentScore": 85,
+      "source": "https://schedule.wnbl.com.au/api/calendar/match?match=69e98cd7-7351-11f1-beaa-efdb90f529db&league=wnbl",
+      "points": 14,
+      "rebounds": 9,
+      "assists": 2,
+      "steals": 1,
+      "blocks": 0,
+      "turnovers": 1,
+      "minutes": "35:44",
+      "fieldGoalsMade": 7,
+      "fieldGoalsAttempted": 15,
+      "threePointsMade": 0,
+      "threePointsAttempted": 2,
+      "freeThrowsMade": 0,
+      "freeThrowsAttempted": 2
+    },
     {
       "player": "Jade Melbourne",
       "league": "WNBL",
@@ -379,25 +410,6 @@
     }
   ],
   "upcoming": [
-    {
-      "player": "Nyadiew Puoch",
-      "league": "WNBL",
-      "team": "UC Capitals",
-      "opponent": "Townsville Fire",
-      "home": true,
-      "date": "2026-11-15T04:00:00Z",
-      "status": "Scheduled",
-      "venue": "AIS Arena",
-      "round": 5,
-      "matchNumber": 76,
-      "broadcast": {
-        "providers": [
-          "9Now",
-          "Disney+"
-        ],
-        "note": "League-wide Australian coverage; verify specific stream"
-      }
-    },
     {
       "player": "Nyadiew Puoch",
       "league": "WNBL",
