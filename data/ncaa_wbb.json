@@ -1,11 +1,40 @@
 {
   "source": "ESPN NCAA endpoints (unofficial)",
-  "updatedAt": "2026-11-15T06:33:45.875012+00:00",
+  "updatedAt": "2026-11-16T07:19:02.189770+00:00",
   "players": [
     "Monique Bobongie",
     "Dallas Loughridge"
   ],
   "games": [
+    {
+      "id": "401913858",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-11-15T19:00Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Harvard Crimson",
+      "teamScore": "75",
+      "opponentScore": "53",
+      "home": false,
+      "status": "post",
+      "stats": {
+        "MIN": "31",
+        "PTS": "15",
+        "FG": "6-11",
+        "3PT": "0-4",
+        "FT": "3-3",
+        "REB": "2",
+        "AST": "1",
+        "TO": "5",
+        "STL": "1",
+        "BLK": "0",
+        "OREB": "1",
+        "DREB": "1",
+        "PF": "3"
+      },
+      "athleteId": "5456282",
+      "headshot": null
+    },
     {
       "id": "401919324",
       "player": "Dallas Loughridge",
@@ -183,16 +212,6 @@
   ],
   "upcoming": [
     {
-      "id": "401913858",
-      "player": "Monique Bobongie",
-      "league": "NCAA WBB",
-      "date": "2026-11-15T19:00Z",
-      "team": "Michigan State Spartans",
-      "opponent": "Harvard Crimson",
-      "home": false,
-      "status": "pre"
-    },
-    {
       "id": "401927069",
       "player": "Dallas Loughridge",
       "league": "NCAA WBB",
@@ -349,6 +368,16 @@
       "date": "2026-12-19T19:00Z",
       "team": "Michigan State Spartans",
       "opponent": "Gonzaga Bulldogs",
+      "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401927074",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-12-21T17:00Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Detroit Mercy Titans",
       "home": true,
       "status": "pre"
     }
