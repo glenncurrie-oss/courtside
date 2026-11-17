@@ -2,8 +2,37 @@
   "source": "ESPN public NBA endpoints (unofficial)",
   "player": "Josh Giddey",
   "team": "Chicago Bulls",
-  "updatedAt": "2026-11-17T01:30:34.971860+00:00",
+  "updatedAt": "2026-11-17T07:38:18.867422+00:00",
   "games": [
+    {
+      "id": "401909995",
+      "date": "2026-11-17T00:00Z",
+      "opponent": "Cleveland Cavaliers",
+      "home": false,
+      "team": "Chicago Bulls",
+      "league": "NBA",
+      "status": "post",
+      "teamScore": "115",
+      "opponentScore": "126",
+      "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4871145.png",
+      "athleteId": "4871145",
+      "stats": {
+        "MIN": "24",
+        "PTS": "4",
+        "FG": "1-5",
+        "3PT": "1-4",
+        "FT": "1-2",
+        "REB": "4",
+        "AST": "8",
+        "TO": "6",
+        "STL": "0",
+        "BLK": "1",
+        "OREB": "0",
+        "DREB": "4",
+        "PF": "2",
+        "+/-": "-11"
+      }
+    },
     {
       "id": "401909984",
       "date": "2026-11-15T01:00Z",
