@@ -1,11 +1,40 @@
 {
   "source": "ESPN NCAA endpoints (unofficial)",
-  "updatedAt": "2026-11-16T07:19:02.189770+00:00",
+  "updatedAt": "2026-11-17T06:43:13.319697+00:00",
   "players": [
     "Monique Bobongie",
     "Dallas Loughridge"
   ],
   "games": [
+    {
+      "id": "401927069",
+      "player": "Dallas Loughridge",
+      "league": "NCAA WBB",
+      "date": "2026-11-17T01:00Z",
+      "team": "Michigan Wolverines",
+      "opponent": "Central Michigan Chippewas",
+      "teamScore": "101",
+      "opponentScore": "30",
+      "home": false,
+      "status": "post",
+      "stats": {
+        "MIN": "27",
+        "PTS": "6",
+        "FG": "2-7",
+        "3PT": "0-5",
+        "FT": "2-2",
+        "REB": "3",
+        "AST": "10",
+        "TO": "2",
+        "STL": "3",
+        "BLK": "0",
+        "OREB": "0",
+        "DREB": "3",
+        "PF": "3"
+      },
+      "athleteId": "5455230",
+      "headshot": "https://a.espncdn.com/i/headshots/womens-college-basketball/players/full/5455230.png"
+    },
     {
       "id": "401913858",
       "player": "Monique Bobongie",
@@ -33,7 +62,7 @@
         "PF": "3"
       },
       "athleteId": "5456282",
-      "headshot": null
+      "headshot": "https://a.espncdn.com/i/headshots/womens-college-basketball/players/full/5456282.png"
     },
     {
       "id": "401919324",
@@ -91,7 +120,7 @@
         "PF": "0"
       },
       "athleteId": "5456282",
-      "headshot": null
+      "headshot": "https://a.espncdn.com/i/headshots/womens-college-basketball/players/full/5456282.png"
     },
     {
       "id": "401927068",
@@ -149,7 +178,7 @@
         "PF": "4"
       },
       "athleteId": "5456282",
-      "headshot": null
+      "headshot": "https://a.espncdn.com/i/headshots/womens-college-basketball/players/full/5456282.png"
     },
     {
       "id": "401911737",
