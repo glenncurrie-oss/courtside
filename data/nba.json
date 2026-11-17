@@ -2,7 +2,7 @@
   "source": "ESPN public NBA endpoints (unofficial)",
   "player": "Josh Giddey",
   "team": "Chicago Bulls",
-  "updatedAt": "2026-11-16T19:15:17.980465+00:00",
+  "updatedAt": "2026-11-17T01:30:34.971860+00:00",
   "games": [
     {
       "id": "401909984",
@@ -265,17 +265,6 @@
     }
   ],
   "upcoming": [
-    {
-      "id": "401909995",
-      "date": "2026-11-17T00:00Z",
-      "opponent": "Cleveland Cavaliers",
-      "home": false,
-      "team": "Chicago Bulls",
-      "league": "NBA",
-      "status": "pre",
-      "teamScore": null,
-      "opponentScore": null
-    },
     {
       "id": "401910011",
       "date": "2026-11-19T00:30Z",
