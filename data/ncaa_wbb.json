@@ -1,6 +1,6 @@
 {
   "source": "ESPN NCAA endpoints (unofficial)",
-  "updatedAt": "2026-11-17T06:43:13.319697+00:00",
+  "updatedAt": "2026-11-18T06:41:36.568557+00:00",
   "players": [
     "Monique Bobongie",
     "Dallas Loughridge"
@@ -240,16 +240,6 @@
     }
   ],
   "upcoming": [
-    {
-      "id": "401927069",
-      "player": "Dallas Loughridge",
-      "league": "NCAA WBB",
-      "date": "2026-11-17T01:00Z",
-      "team": "Michigan Wolverines",
-      "opponent": "Central Michigan Chippewas",
-      "home": false,
-      "status": "pre"
-    },
     {
       "id": "401916196",
       "player": "Dallas Loughridge",
