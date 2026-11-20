@@ -1,11 +1,40 @@
 {
   "source": "ESPN NCAA endpoints (unofficial)",
-  "updatedAt": "2026-11-19T06:38:03.823661+00:00",
+  "updatedAt": "2026-11-20T06:40:12.485849+00:00",
   "players": [
     "Monique Bobongie",
     "Dallas Loughridge"
   ],
   "games": [
+    {
+      "id": "401919438",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-11-19T23:30Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Sacred Heart Pioneers",
+      "teamScore": "78",
+      "opponentScore": "49",
+      "home": true,
+      "status": "post",
+      "stats": {
+        "MIN": "22",
+        "PTS": "11",
+        "FG": "4-12",
+        "3PT": "2-7",
+        "FT": "1-1",
+        "REB": "3",
+        "AST": "2",
+        "TO": "1",
+        "STL": "2",
+        "BLK": "1",
+        "OREB": "1",
+        "DREB": "2",
+        "PF": "2"
+      },
+      "athleteId": "5456282",
+      "headshot": "https://a.espncdn.com/i/headshots/womens-college-basketball/players/full/5456282.png"
+    },
     {
       "id": "401916196",
       "player": "Dallas Loughridge",
@@ -269,26 +298,6 @@
     }
   ],
   "upcoming": [
-    {
-      "id": "401916196",
-      "player": "Dallas Loughridge",
-      "league": "NCAA WBB",
-      "date": "2026-11-19T00:00Z",
-      "team": "Michigan Wolverines",
-      "opponent": "Niagara Purple Eagles",
-      "home": true,
-      "status": "pre"
-    },
-    {
-      "id": "401919438",
-      "player": "Monique Bobongie",
-      "league": "NCAA WBB",
-      "date": "2026-11-19T23:30Z",
-      "team": "Michigan State Spartans",
-      "opponent": "Sacred Heart Pioneers",
-      "home": true,
-      "status": "pre"
-    },
     {
       "id": "401916024",
       "player": "Monique Bobongie",
