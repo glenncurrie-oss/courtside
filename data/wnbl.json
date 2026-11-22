@@ -1,7 +1,7 @@
 {
   "league": "WNBL",
   "season": "2026-27",
-  "updatedAt": "2026-11-21T14:57:29Z",
+  "updatedAt": "2026-11-22T02:57:17Z",
   "source": "https://fixturedownload.azurewebsites.net/feed/json/wnbl-2026",
   "statsSource": "https://schedule.wnbl.com.au/api/calendar/schedule?league=wnbl&limit=500&offset=0&year=2026",
   "games": [
@@ -410,25 +410,6 @@
     }
   ],
   "upcoming": [
-    {
-      "player": "Nyadiew Puoch",
-      "league": "WNBL",
-      "team": "UC Capitals",
-      "opponent": "Tasmania Jewels",
-      "home": true,
-      "date": "2026-11-22T02:00:00Z",
-      "status": "Scheduled",
-      "venue": "AIS Arena",
-      "round": 6,
-      "matchNumber": 80,
-      "broadcast": {
-        "providers": [
-          "9Now",
-          "Disney+"
-        ],
-        "note": "League-wide Australian coverage; verify specific stream"
-      }
-    },
     {
       "player": "Isobel Borlase",
       "league": "WNBL",
