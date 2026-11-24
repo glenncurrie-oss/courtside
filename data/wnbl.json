@@ -1,10 +1,41 @@
 {
   "league": "WNBL",
   "season": "2026-27",
-  "updatedAt": "2026-11-24T02:59:39Z",
+  "updatedAt": "2026-11-24T15:12:23Z",
   "source": "https://fixturedownload.azurewebsites.net/feed/json/wnbl-2026",
   "statsSource": "https://schedule.wnbl.com.au/api/calendar/schedule?league=wnbl&limit=500&offset=0&year=2026",
   "games": [
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Perth Lynx",
+      "home": false,
+      "date": "2026-11-24T10:00:00Z",
+      "status": "Final",
+      "venue": "Perth High Performance Centre",
+      "round": "6",
+      "matchId": "69eca873-7351-11f1-8f26-7d0f66589dc6",
+      "id": "wnbl:69eca873-7351-11f1-8f26-7d0f66589dc6:nyadiew-puoch",
+      "homeScore": 113,
+      "awayScore": 90,
+      "teamScore": 90,
+      "opponentScore": 113,
+      "source": "https://schedule.wnbl.com.au/api/calendar/match?match=69eca873-7351-11f1-8f26-7d0f66589dc6&league=wnbl",
+      "points": 12,
+      "rebounds": 2,
+      "assists": 6,
+      "steals": 2,
+      "blocks": 2,
+      "turnovers": 5,
+      "minutes": "31:31",
+      "fieldGoalsMade": 5,
+      "fieldGoalsAttempted": 11,
+      "threePointsMade": 1,
+      "threePointsAttempted": 6,
+      "freeThrowsMade": 1,
+      "freeThrowsAttempted": 2
+    },
     {
       "player": "Jade Melbourne",
       "league": "WNBL",
@@ -503,25 +534,6 @@
     }
   ],
   "upcoming": [
-    {
-      "player": "Nyadiew Puoch",
-      "league": "WNBL",
-      "team": "UC Capitals",
-      "opponent": "Perth Lynx",
-      "home": false,
-      "date": "2026-11-24T10:00:00Z",
-      "status": "Scheduled",
-      "venue": "Perth High Performance Centre",
-      "round": 6,
-      "matchNumber": 82,
-      "broadcast": {
-        "providers": [
-          "9Now",
-          "Disney+"
-        ],
-        "note": "League-wide Australian coverage; verify specific stream"
-      }
-    },
     {
       "player": "Isobel Borlase",
       "league": "WNBL",
