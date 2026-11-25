@@ -1,11 +1,40 @@
 {
   "source": "ESPN NCAA endpoints (unofficial)",
-  "updatedAt": "2026-11-24T06:37:31.921988+00:00",
+  "updatedAt": "2026-11-25T06:36:56.391242+00:00",
   "players": [
     "Monique Bobongie",
     "Dallas Loughridge"
   ],
   "games": [
+    {
+      "id": "401921218",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-11-24T19:30Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Virginia Tech Hokies",
+      "teamScore": "68",
+      "opponentScore": "69",
+      "home": false,
+      "status": "post",
+      "stats": {
+        "MIN": "28",
+        "PTS": "6",
+        "FG": "3-8",
+        "3PT": "0-1",
+        "FT": "0-0",
+        "REB": "1",
+        "AST": "1",
+        "TO": "1",
+        "STL": "0",
+        "BLK": "1",
+        "OREB": "0",
+        "DREB": "1",
+        "PF": "1"
+      },
+      "athleteId": "5456282",
+      "headshot": "https://a.espncdn.com/i/headshots/womens-college-basketball/players/full/5456282.png"
+    },
     {
       "id": "401913729",
       "player": "Dallas Loughridge",
@@ -357,16 +386,6 @@
   ],
   "upcoming": [
     {
-      "id": "401921218",
-      "player": "Monique Bobongie",
-      "league": "NCAA WBB",
-      "date": "2026-11-24T19:30Z",
-      "team": "Michigan State Spartans",
-      "opponent": "Virginia Tech Hokies",
-      "home": true,
-      "status": "pre"
-    },
-    {
       "id": "401927070",
       "player": "Dallas Loughridge",
       "league": "NCAA WBB",
@@ -410,7 +429,7 @@
       "id": "401927072",
       "player": "Dallas Loughridge",
       "league": "NCAA WBB",
-      "date": "2026-12-05T07:00Z",
+      "date": "2026-12-05T19:00Z",
       "team": "Michigan Wolverines",
       "opponent": "Oklahoma Sooners",
       "home": false,
@@ -488,22 +507,22 @@
     },
     {
       "id": "401921857",
-      "player": "Monique Bobongie",
-      "league": "NCAA WBB",
-      "date": "2026-12-29T23:00Z",
-      "team": "Michigan State Spartans",
-      "opponent": "Michigan Wolverines",
-      "home": false,
-      "status": "pre"
-    },
-    {
-      "id": "401921857",
       "player": "Dallas Loughridge",
       "league": "NCAA WBB",
       "date": "2026-12-29T23:00Z",
       "team": "Michigan Wolverines",
       "opponent": "Michigan State Spartans",
       "home": true,
+      "status": "pre"
+    },
+    {
+      "id": "401921857",
+      "player": "Monique Bobongie",
+      "league": "NCAA WBB",
+      "date": "2026-12-29T23:00Z",
+      "team": "Michigan State Spartans",
+      "opponent": "Michigan Wolverines",
+      "home": false,
       "status": "pre"
     }
   ],
