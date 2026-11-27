@@ -1,10 +1,41 @@
 {
   "league": "WNBL",
   "season": "2026-27",
-  "updatedAt": "2026-11-27T03:07:19Z",
+  "updatedAt": "2026-11-27T15:06:21Z",
   "source": "https://fixturedownload.azurewebsites.net/feed/json/wnbl-2026",
   "statsSource": "https://schedule.wnbl.com.au/api/calendar/schedule?league=wnbl&limit=500&offset=0&year=2026",
   "games": [
+    {
+      "player": "Nyadiew Puoch",
+      "league": "WNBL",
+      "team": "UC Capitals",
+      "opponent": "Geelong Venom",
+      "home": true,
+      "date": "2026-11-27T08:00:00Z",
+      "status": "Final",
+      "venue": "AIS Arena",
+      "round": "7",
+      "matchId": "69ee61da-7351-11f1-aed5-af6d2ee2976c",
+      "id": "wnbl:69ee61da-7351-11f1-aed5-af6d2ee2976c:nyadiew-puoch",
+      "homeScore": 69,
+      "awayScore": 72,
+      "teamScore": 69,
+      "opponentScore": 72,
+      "source": "https://schedule.wnbl.com.au/api/calendar/match?match=69ee61da-7351-11f1-aed5-af6d2ee2976c&league=wnbl",
+      "points": 5,
+      "rebounds": 13,
+      "assists": 7,
+      "steals": 1,
+      "blocks": 1,
+      "turnovers": 4,
+      "minutes": "33:29",
+      "fieldGoalsMade": 0,
+      "fieldGoalsAttempted": 6,
+      "threePointsMade": 0,
+      "threePointsAttempted": 2,
+      "freeThrowsMade": 5,
+      "freeThrowsAttempted": 8
+    },
     {
       "player": "Jade Melbourne",
       "league": "WNBL",
@@ -596,25 +627,6 @@
     }
   ],
   "upcoming": [
-    {
-      "player": "Nyadiew Puoch",
-      "league": "WNBL",
-      "team": "UC Capitals",
-      "opponent": "Geelong Venom",
-      "home": true,
-      "date": "2026-11-27T08:00:00Z",
-      "status": "Scheduled",
-      "venue": "AIS Arena",
-      "round": 7,
-      "matchNumber": 84,
-      "broadcast": {
-        "providers": [
-          "9Now",
-          "Disney+"
-        ],
-        "note": "League-wide Australian coverage; verify specific stream"
-      }
-    },
     {
       "player": "Isobel Borlase",
       "league": "WNBL",
